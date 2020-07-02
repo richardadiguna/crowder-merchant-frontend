@@ -1,0 +1,9 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "defaultTitle": "DANA Mini Biller Template",
+    "titleBarColor": "#108EE9"
+  }
+}
