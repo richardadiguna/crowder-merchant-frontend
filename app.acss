@@ -1,3 +1,6 @@
+@import "./styles/fonts.acss";
+@import "./styles/fiat-commons.acss";
+
 page {
   flex: 1;
   display: flex;

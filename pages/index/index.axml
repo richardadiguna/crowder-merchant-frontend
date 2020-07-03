@@ -1,3 +1,6 @@
 <view>
-  this is a blank page
+  <text class="f-title title-30">text using class f-title title-30</text>
+</view>
+<view>
+  <text class="text-blue-50">text using class text-blue-50</text>
 </view>
