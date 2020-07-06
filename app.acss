@@ -2,8 +2,6 @@
 @import "./styles/fiat-commons.acss";
 
 page {
-  flex: 1;
-  display: flex;
   background: #ffffff;
   box-sizing: border-box;
 }
