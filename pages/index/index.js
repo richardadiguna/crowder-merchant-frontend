@@ -27,8 +27,8 @@ Page({
   onShareAppMessage() {
     // Back to custom sharing information
     return {
-      title: 'My App',
-      desc: 'My App description',
+      title: 'DANA Mini Biller Template',
+      desc: 'DANA Mini Program tempalate for bill payment',
       path: 'pages/index/index',
     };
   },
