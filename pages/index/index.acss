@@ -1,0 +1,8 @@
+.title-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 26px;
+}

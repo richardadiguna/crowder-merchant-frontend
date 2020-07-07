@@ -1,6 +1,7 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/fiat/button/button"
   ],
   "window": {
     "defaultTitle": "DANA Mini Biller Template",
