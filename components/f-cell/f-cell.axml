@@ -1,3 +1,5 @@
-<view class="f-cell {{ className }}">
+<import-sjs name="element" from="../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-cell', className) }}">
   <slot/>
 </view>
