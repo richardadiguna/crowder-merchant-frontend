@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "f-cell": "/components/f-cell/f-cell",
+    "f-cell-content": "/components/f-cell-content/f-cell-content",
+    "f-cell-desc": "/components/f-cell-desc/f-cell-desc",
+    "f-cell-label": "/components/f-cell-label/f-cell-label"
+  }
+}

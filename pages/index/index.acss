@@ -6,3 +6,7 @@
 .title {
   font-size: 26px;
 }
+
+.btn-nav {
+  margin-bottom: 10px;
+}

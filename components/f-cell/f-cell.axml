@@ -1,0 +1,3 @@
+<view class="f-cell {{ className }}">
+  <text>{{ className }}</text>
+</view>
