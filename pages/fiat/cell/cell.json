@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "f-cell": "/components/fiat/f-cell/f-cell",
+    "f-cell-content": "/components/fiat/f-cell-content/f-cell-content",
+    "f-cell-desc": "/components/fiat/f-cell-desc/f-cell-desc",
+    "f-cell-label": "/components/fiat/f-cell-label/f-cell-label"
+  }
+}
