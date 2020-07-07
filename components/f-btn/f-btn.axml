@@ -1,0 +1,4 @@
+<button 
+  class="f-btn f-btn-{{ type }} f-btn-{{ size }} {{ uppercase ? 'f-btn-uppercase' : '' }}">
+  <slot></slot>
+</button>

@@ -4,3 +4,13 @@
 <view>
   <text class="text-blue-50">text using class text-blue-50</text>
 </view>
+<view> --- divider --- </view>
+<f-btn>Button Primary</f-btn>
+<view> --- divider --- </view>
+<f-btn type="secondary">Button Secondary</f-btn>
+<view> --- divider --- </view>
+<f-btn size="small">button primary small</f-btn>
+<view> --- divider --- </view>
+<f-btn type="secondary" size="small">button secondary small</f-btn>
+<view> --- divider --- </view>
+<f-btn size="small" uppercase="{{true}}">button primary small uppercase</f-btn>
