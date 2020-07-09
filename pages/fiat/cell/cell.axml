@@ -1,16 +1,16 @@
 <f-cell class="pl-16 pr-4 py-12">
-  <!-- <f-cell-icon w="24" h="24" class="mr-12"> -->
-    <!-- <img src="../assets/dana-coin.svg" /> -->
-  <!-- </f-cell-icon> -->
+  <f-cell-icon w="24" h="24" class="mr-12">
+    <f-icon name="dana-coin"/>
+  </f-cell-icon>
   <f-cell-content>
-    <f-cell-label>
+    <f-cell-label onTap="onTap">
       Label
     </f-cell-label>
     <f-cell-desc>
       Description
     </f-cell-desc>
   </f-cell-content>
-  <f-cell-action onTap="onTap">
+  <f-cell-action>
     <view class="arrow"/>
   </f-cell-action>
 </f-cell>
@@ -27,9 +27,9 @@
 <!-- <f-divider /> -->
 
 <f-cell class="pl-16 pr-4 py-12">
-  <!-- <f-cell-icon w="30" h="30" class="mr-12">
-    <img src="../assets/dana-coin.svg" />
-  </f-cell-icon> -->
+  <f-cell-icon w="30" h="30" class="mr-12">
+    <f-icon name="dana-coin"/>
+  </f-cell-icon>
   <f-cell-content>
     <f-cell-label>
       Label arrow notif
