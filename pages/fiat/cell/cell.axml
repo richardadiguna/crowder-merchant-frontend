@@ -3,7 +3,7 @@
     <!-- <img src="../assets/dana-coin.svg" /> -->
   <!-- </f-cell-icon> -->
   <f-cell-content>
-    <f-cell-label>
+    <f-cell-label onTap="onTap">
       Label
     </f-cell-label>
     <f-cell-desc>
