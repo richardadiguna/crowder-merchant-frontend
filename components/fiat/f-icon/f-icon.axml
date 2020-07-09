@@ -1,0 +1,7 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-icon', className) }}"
+  style="background-image: url('components/fiat/assets/{{ name }}.svg')"
+  onTap="onTap">
+  <slot/>
+</view>
