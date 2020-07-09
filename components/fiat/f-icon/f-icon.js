@@ -5,6 +5,8 @@ Component(FiatComponent({
   data: {},
   props: {
     name: '',
+    w: null,
+    h: null,
   },
   didMount() {},
   didUpdate() {},
