@@ -3,7 +3,11 @@ import FiatComponent from '../core/fiat-component'
 Component(FiatComponent({
   mixins: [],
   data: {},
-  props: {},
+  props: {
+    name: '',
+    w: null,
+    h: null,
+  },
   didMount() {},
   didUpdate() {},
   didUnmount() {},
