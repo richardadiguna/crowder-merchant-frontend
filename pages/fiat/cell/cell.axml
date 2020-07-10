@@ -10,7 +10,7 @@
       Description
     </f-cell-desc>
   </f-cell-content>
-  <f-cell-action>
+  <f-cell-action onTap="onTap">
     <view class="arrow"/>
   </f-cell-action>
 </f-cell>
@@ -35,7 +35,7 @@
       Label arrow notif
     </f-cell-label>
   </f-cell-content>
-  <f-cell-action class="f-flex flex-center" >
+  <f-cell-action class="f-flex flex-center" onTap="onTap">
     <view class="f-body body-16 text-blue-50">
       Value
     </view>
