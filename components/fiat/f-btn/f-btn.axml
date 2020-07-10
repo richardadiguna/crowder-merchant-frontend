@@ -1,4 +1,7 @@
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
 <button 
-  class="f-btn f-btn-{{ type }} f-btn-{{ size }} {{ uppercase ? 'f-btn-uppercase' : '' }}">
+  class="{{ element.classAttr(defaultClasses, className) }}"
+>
   <slot></slot>
 </button>

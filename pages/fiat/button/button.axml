@@ -1,16 +1,18 @@
-<view>
-  <text class="f-title title-30">text using class f-title title-30</text>
+<view class="f-body m-16">  
+  <f-btn>Button Primary</f-btn>
+  
+  <view class="m-16"></view>
+  
+  <f-btn type="secondary">Button Secondary</f-btn>
+  <view class="m-16"></view>
+  
+  <f-btn size="small">button primary small</f-btn>
+  
+  <view class="m-16"></view>
+  
+  <f-btn type="secondary" size="small">button secondary small</f-btn>
+  
+  <view class="m-16"></view>
+  
+  <f-btn size="small" uppercase="{{true}}">button primary small uppercase</f-btn>
 </view>
-<view>
-  <text class="text-blue-50">text using class text-blue-50</text>
-</view>
-<view> --- divider --- </view>
-<f-btn>Button Primary</f-btn>
-<view> --- divider --- </view>
-<f-btn type="secondary">Button Secondary</f-btn>
-<view> --- divider --- </view>
-<f-btn size="small">button primary small</f-btn>
-<view> --- divider --- </view>
-<f-btn type="secondary" size="small">button secondary small</f-btn>
-<view> --- divider --- </view>
-<f-btn size="small" uppercase="{{true}}">button primary small uppercase</f-btn>

@@ -1,0 +1,9 @@
+<view class="f-body m-16">
+  <view class="f-title title-20 mb-16">FIAT Components</view>
+  <f-btn type="secondary" size="small" class="mb-16">
+    <navigator url="/pages/fiat/button/button">Button</navigator>
+  </f-btn>
+  <f-btn type="secondary" size="small">
+    <navigator url="/pages/fiat/cell/cell">Cell</navigator>
+  </f-btn>
+</view>
