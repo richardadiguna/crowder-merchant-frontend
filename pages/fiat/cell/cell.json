@@ -6,6 +6,7 @@
     "f-cell-desc": "/components/fiat/f-cell-desc/f-cell-desc",
     "f-cell-icon": "/components/fiat/f-cell-icon/f-cell-icon",
     "f-cell-label": "/components/fiat/f-cell-label/f-cell-label",
+    "f-divider": "/components/fiat/f-divider/f-divider",
     "f-icon": "/components/fiat/f-icon/f-icon"
   }
 }
