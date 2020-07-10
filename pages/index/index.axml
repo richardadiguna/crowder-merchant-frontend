@@ -1,6 +1,6 @@
 <view class="f-body m-16">
-  biller template main page
-  <f-btn type="secondary" size="small" class="mt-16">
+  <view class="f-title title-20 mb-16">biller template main page</view>
+  <f-btn type="secondary" size="small">
     <navigator url="/pages/fiat/index/index">go to FIAT components main page</navigator>
   </f-btn>
 </view>
