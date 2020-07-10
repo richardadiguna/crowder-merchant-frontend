@@ -1,0 +1,11 @@
+<view style={{ padding: 10 }}>
+  <view class="title-container">
+    <text class="title">FIAT Styleguid and Components</text>
+  </view>
+  <navigator url="/pages/fiat/button/button">
+    <button class="btn-nav" type="primary">Button</button>
+  </navigator>
+  <navigator url="/pages/fiat/cell/cell">
+    <button class="btn-nav" type="primary">Cell</button>
+  </navigator>
+</view>

@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/fiat/button/button",
-    "pages/fiat/cell/cell"
+    "pages/fiat/cell/cell",
+    "pages/fiat/index/index"
   ],
   "window": {
     "defaultTitle": "DANA Mini Biller Template",

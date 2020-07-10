@@ -1,0 +1,12 @@
+.title-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.title {
+  font-size: 26px;
+}
+
+.btn-nav {
+  margin-bottom: 10px;
+}
