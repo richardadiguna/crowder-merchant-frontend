@@ -14,9 +14,9 @@
     <view class="arrow"/>
   </f-cell-action>
 </f-cell>
-<!-- <f-divider/> -->
+<f-divider/>
 
-<!-- <f-divider /> -->
+<f-divider />
 <f-cell class="pl-16 pr-4 py-12">
   <f-cell-content>
     <f-cell-label>
@@ -24,7 +24,7 @@
     </f-cell-label>
   </f-cell-content>
 </f-cell>
-<!-- <f-divider /> -->
+<f-divider />
 
 <f-cell class="pl-16 pr-4 py-12">
   <f-cell-icon w="30" h="30" class="mr-12">
@@ -42,4 +42,4 @@
     <view class="arrow"/>
   </f-cell-action>
 </f-cell>
-<!-- <f-divider/> -->
+<f-divider/>
