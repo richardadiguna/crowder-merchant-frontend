@@ -10,13 +10,13 @@
       Description
     </f-cell-desc>
   </f-cell-content>
-  <f-cell-action>
+  <f-cell-action onTap="onTap">
     <view class="arrow"/>
   </f-cell-action>
 </f-cell>
-<!-- <f-divider/> -->
+<f-divider/>
 
-<!-- <f-divider /> -->
+<f-divider />
 <f-cell class="pl-16 pr-4 py-12">
   <f-cell-content>
     <f-cell-label>
@@ -24,7 +24,7 @@
     </f-cell-label>
   </f-cell-content>
 </f-cell>
-<!-- <f-divider /> -->
+<f-divider />
 
 <f-cell class="pl-16 pr-4 py-12">
   <f-cell-icon w="30" h="30" class="mr-12">
@@ -35,11 +35,11 @@
       Label arrow notif
     </f-cell-label>
   </f-cell-content>
-  <f-cell-action class="f-flex flex-center" >
+  <f-cell-action class="f-flex flex-center" onTap="onTap">
     <view class="f-body body-16 text-blue-50">
       Value
     </view>
     <view class="arrow"/>
   </f-cell-action>
 </f-cell>
-<!-- <f-divider/> -->
+<f-divider/>
