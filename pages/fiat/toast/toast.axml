@@ -28,7 +28,15 @@
     Toast callback and costum class
   </f-btn>
 
-  <f-btn onTap="handleToast('snackbar')">
+  <f-toast snackbar type="success"
+    visible="{{ isToastSnackbarVisible }}"
+    message="Placeholder for 2 - line message here. Please put your message here. "
+    onHide="hideToastSnackbar"
+    onAction="handleToastSnackbarAction"
+    actionText="ACTION"
+    duration="10000"/>
+
+  <f-btn onTap="showToastSnackbar">
     Snackbar
   </f-btn>
 </view>

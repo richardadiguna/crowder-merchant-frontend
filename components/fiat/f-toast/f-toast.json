@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "transition": "/components/transition/transition",
+    "f-btn": "/components/fiat/f-btn/f-btn",
     "f-icon": "/components/fiat/f-icon/f-icon",
     "f-overlay": "/components/fiat/f-overlay/f-overlay"
   }

@@ -43,3 +43,24 @@
 .f-btn-uppercase {
   text-transform: uppercase;
 }
+
+.f-btn-ghost {
+  color: #108ee9; /* @blue-50 */
+  background-color: transparent;
+}
+
+.f-btn-ghost:disabled {
+  color: #bfbfbf; /* @grey-40 */
+  position: relative;
+}
+
+.f-btn-ghost:disabled:after {
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 4px;
+  content: '';
+}

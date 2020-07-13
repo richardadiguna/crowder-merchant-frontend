@@ -4,6 +4,7 @@ Page({
     isToastWarningVisible: false,
     isToastIconVisible: false,
     isToastCustomVisible: false,
+    isToastSnackbarVisible: false,
   },
   onLoad() {},
   handleToastSpin() {
@@ -27,5 +28,15 @@ Page({
   hideToastCustom() {
     my.alert({ title: 'Toast callback', content: 'this is toast callback content', buttonText: 'Okay' })
     this.setData({ isToastCustomVisible: false }) 
+  },
+  showToastSnackbar() {
+    this.setData({ isToastSnackbarVisible: true })
+  },
+  hideToastSnackbar() {
+    my.alert({ title: 'Toast snackbar', content: 'this is onHide callback', buttonText: 'Okay' })
+    this.setData({ isToastSnackbarVisible: false }) 
+  },
+  handleToastSnackbarAction() {
+    my.alert({ title: 'Toast snackbar', content: 'this is onAction callback', buttonText: 'Okay' })
   }
 });

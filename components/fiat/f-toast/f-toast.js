@@ -8,6 +8,7 @@ Component(FiatComponent({
     visible: false,
     message: '',
     onHide: null,
+    onAction: null,
     duration: 2500,
   },
   didMount() {
@@ -30,6 +31,10 @@ Component(FiatComponent({
       } else {
         clearTimeout(this.autoHideTimer)
       }
+    },
+    onAction() {
+      const { onAction } = this.props
+      if (onAction) onAction()
     }
   },
 }));
