@@ -1,0 +1,28 @@
+.f-overlay .logo-back, .f-overlay .logo-front {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.f-overlay .logo-back {
+  z-index: 102;
+  width: 54px !important;
+  height: 54px !important;
+}
+
+.f-overlay .logo-front {
+  z-index: 103;
+  width: 38px !important;
+  height: 38px !important;
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: translate(-50%,-50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%,-50%) rotate(359deg);
+  }
+}

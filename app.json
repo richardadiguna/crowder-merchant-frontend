@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/fiat/button/button",
     "pages/fiat/cell/cell",
-    "pages/fiat/index/index"
+    "pages/fiat/index/index",
+    "pages/fiat/toast/toast"
   ],
   "window": {
     "defaultTitle": "DANA Mini Biller Template",

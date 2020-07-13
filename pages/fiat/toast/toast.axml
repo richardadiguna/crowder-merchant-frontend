@@ -1,0 +1,18 @@
+<view>
+  <f-toast type="spin" visible="{{ isToastSpinVisible }}"/>
+  <f-btn onTap="handleToastSpin">
+    Spinner
+  </f-btn>
+  <f-btn onTap="handleToast('toast-default')">
+    Toast default
+  </f-btn>
+  <f-btn onTap="handleToast('toast-icon')">
+    Toast with icon
+  </f-btn>
+  <f-btn onTap="handleToast('toast-callback-costum-class')">
+    Toast callback and costum class
+  </f-btn>
+  <f-btn onTap="handleToast('snackbar')">
+    Snackbar
+  </f-btn>
+</view>

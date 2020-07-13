@@ -2,6 +2,7 @@
 
 <button 
   class="{{ element.classAttr(defaultClasses, className) }}"
+  onTap="onTap"
 >
   <slot></slot>
 </button>

@@ -1,0 +1,59 @@
+<view style="display: {{ visible ? 'block' : 'none' }}">
+  <transition name="f-fade">
+    <f-overlay
+      a:if="type === 'spin'"
+      type="white">
+      <f-icon name="loading-back" class="logo-back"/>
+      <f-icon name="loading-spinner" class="logo-front"/>
+    </f-overlay>
+  </transition>
+  <!-- <transition name="f-alert">
+    <div
+      v-if="type !== 'spin' && visible"
+      :class="[{
+        'f-snackbar': action.text,
+        'f-toast': !action.text,
+        },
+        cssClass,
+        type,
+      ]"
+    >
+      <div
+        v-if="icon"
+        class="icon-wrapper"
+      >
+        <img
+          v-if="icon === 'f-success'"
+          src="../../assets/f-success.svg"
+        />
+        <img
+          v-else-if="icon === 'f-warning'"
+          src="../../assets/f-warning.svg"
+        />
+        <img
+          v-else-if="icon === 'f-error'"
+          src="../../assets/f-error-round.svg"
+        />
+        <img
+          v-else
+          :src="icon"
+        />
+      </div>
+
+      <div class="text">{{message}}</div>
+      <div
+        v-if="action.text"
+        class="f-toast-button-wrapper"
+      >
+        <f-btn
+          @click="handleAction"
+          type="ghost"
+          size="small"
+          class="pr-0"
+        >
+          {{action.text}}
+        </f-btn>
+      </div>
+    </div>
+  </transition> -->
+</view>

@@ -1,4 +1,6 @@
-Component({
+import FiatComponent from '../core/fiat-component'
+
+Component(FiatComponent({
   mixins: [],
   data: {
     defaultClasses: 'f-btn'
@@ -18,4 +20,4 @@ Component({
   didUpdate() {},
   didUnmount() {},
   methods: {},
-});
+}));
