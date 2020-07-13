@@ -2,6 +2,7 @@ Page({
   data: {
     isToastSpinVisible: false,
     isToastWarningVisible: false,
+    isToastIconVisible: false,
   },
   onLoad() {},
   handleToastSpin() {
@@ -12,5 +13,11 @@ Page({
   },
   hideToastWarning() {
     this.setData({ isToastWarningVisible: false }) 
+  },
+  showToastIcon() {
+    this.setData({ isToastIconVisible: true })
+  },
+  hideToastIcon() {
+    this.setData({ isToastIconVisible: false }) 
   }
 });

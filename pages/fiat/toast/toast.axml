@@ -12,9 +12,14 @@
     Toast default
   </f-btn>
 
-  <f-btn onTap="handleToast('toast-icon')">
+  <f-toast type="success" icon="dana-coin"
+    visible="{{ isToastIconVisible }}"
+    message="Placeholder for message here"
+    onHide="hideToastIcon"/>
+  <f-btn onTap="showToastIcon">
     Toast with icon
   </f-btn>
+
   <f-btn onTap="handleToast('toast-callback-costum-class')">
     Toast callback and costum class
   </f-btn>
