@@ -3,6 +3,7 @@ Page({
     isToastSpinVisible: false,
     isToastWarningVisible: false,
     isToastIconVisible: false,
+    isToastCustomVisible: false,
   },
   onLoad() {},
   handleToastSpin() {
@@ -19,5 +20,12 @@ Page({
   },
   hideToastIcon() {
     this.setData({ isToastIconVisible: false }) 
+  },
+  showToastCustom() {
+    this.setData({ isToastCustomVisible: true })
+  },
+  hideToastCustom() {
+    my.alert({ title: 'Toast callback', content: 'this is toast callback content', buttonText: 'Okay' })
+    this.setData({ isToastCustomVisible: false }) 
   }
 });

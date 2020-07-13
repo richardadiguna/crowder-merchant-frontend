@@ -15,19 +15,20 @@
   <f-toast type="error" icon="dana-coin"
     visible="{{ isToastIconVisible }}"
     message="Placeholder for 2- line message here. Please put your message here. Please put your message here."
-    onHide="hideToastIcon" duration="100000"/>
+    onHide="hideToastIcon"/>
   <f-btn onTap="showToastIcon">
     Toast with icon
   </f-btn>
 
-  <!--<f-toast type="success" icon="dana-coin"
+  <f-toast type="success" class="toast-custom-class"
     visible="{{ isToastCustomVisible }}"
-    message="Placeholder for message here"
+    message="Placeholder for 2- line message here. Please put your message here. "
     onHide="hideToastCustom"/>
   <f-btn onTap="showToastCustom">
     Toast callback and costum class
   </f-btn>
+
   <f-btn onTap="handleToast('snackbar')">
     Snackbar
-  </f-btn>-->
+  </f-btn>
 </view>
