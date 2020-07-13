@@ -3,7 +3,10 @@
   <f-btn type="secondary" size="small" class="mb-16">
     <navigator url="/pages/fiat/button/button">Button</navigator>
   </f-btn>
-  <f-btn type="secondary" size="small">
+  <f-btn type="secondary" size="small" class="mb-16">
     <navigator url="/pages/fiat/cell/cell">Cell</navigator>
+  </f-btn>
+  <f-btn type="secondary" size="small">
+    <navigator url="/pages/fiat/toast/toast">Toast</navigator>
   </f-btn>
 </view>
