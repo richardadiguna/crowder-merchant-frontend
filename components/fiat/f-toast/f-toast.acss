@@ -1,3 +1,55 @@
+.f-toast {
+  top: 8px;
+  right: .16rem;
+  left: .16rem;
+
+  /* overlayBar */
+  font-size: 12px;
+  line-height: 1.34;
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  padding: .11rem .16rem;
+  color: #313131; /* @grey-90 */
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.f-toast .icon-wrapper {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  margin-right: 8px;
+}
+
+.f-toast .icon-wrapper .f-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.f-toast .text {
+  flex-grow: 1;
+}
+
+.f-toast.warning {
+  border: solid 1px #fb8b01; /* @yellow-50 */
+}
+
+.f-toast.error {
+  border: solid 1px #ff5d55; /* @red-50; */
+}
+
+.f-toast.success {
+  border: solid 1px #00ce64; /* @green-50 */
+}
+
 .f-overlay .logo-back, .f-overlay .logo-front {
   position: fixed;
   top: 50%;
@@ -26,3 +78,34 @@
     transform: translate(-50%,-50%) rotate(359deg);
   }
 }
+
+/*.f-snackbar, .f-toast {
+  @overlayBar();
+  &.warning {
+    border: solid .01rem @yellow-50;
+  }
+  &.error {
+    border: solid .01rem @red-50;
+  }
+  &.success {
+    border: solid .01rem @green-50;
+  }
+}*/
+
+/*.f-snackbar {
+  right: .16rem;
+  bottom: .24rem;
+  left: .16rem;
+}*/
+
+/*.f-toast-button-wrapper {
+  position: relative;
+  min-width: .6rem;
+
+  .f-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}*/

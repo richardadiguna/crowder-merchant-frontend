@@ -3,9 +3,15 @@
   <f-btn onTap="handleToastSpin">
     Spinner
   </f-btn>
-  <f-btn onTap="handleToast('toast-default')">
+
+  <f-toast type="warning"
+    visible="{{ isToastWarningVisible }}"
+    message="Placeholder for message here"
+    onHide="hideToastWarning"/>
+  <f-btn onTap="showToastWarning">
     Toast default
   </f-btn>
+
   <f-btn onTap="handleToast('toast-icon')">
     Toast with icon
   </f-btn>

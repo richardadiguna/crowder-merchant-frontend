@@ -6,9 +6,30 @@ Component(FiatComponent({
   props: {
     type: '',
     visible: false,
+    message: '',
+    onHide: null,
+    duration: 2500,
   },
-  didMount() {},
-  didUpdate() {},
-  didUnmount() {},
-  methods: {},
+  didMount() {
+    this.autoHide()
+  },
+  didUpdate() {
+    this.autoHide()
+  },
+  didUnmount() {
+    clearTimeout(this.autoHideTimer)
+  },
+  methods: {
+    autoHide() {
+      const { type, visible, duration, onHide } = this.props
+      if (type === 'spin') return
+      if (visible) {
+        this.autoHideTimer = setTimeout(() => {
+          if (onHide) onHide()
+        }, duration);
+      } else {
+        clearTimeout(this.autoHideTimer)
+      }
+    }
+  },
 }));
