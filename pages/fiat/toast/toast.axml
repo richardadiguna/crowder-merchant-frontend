@@ -47,7 +47,7 @@
   <view class="title-16 mt-32 mb-16 f-text-center">
     <text>Toast with ref</text>
   </view>
-  <f-toast ref="saveToastRef"/>
+  <f-toast ref="saveToastRef" class="custom-class"/>
   <f-btn onTap="handleToastRefSpin">
     Spinner
   </f-btn>
@@ -56,5 +56,8 @@
   </f-btn>
   <f-btn onTap="handleToastRefIcon">
     Toast with icon
+  </f-btn>
+  <f-btn onTap="handleToastRefCustom">
+    Toast callback
   </f-btn>
 </view>

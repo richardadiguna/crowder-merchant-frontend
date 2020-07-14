@@ -54,6 +54,7 @@ Component(FiatComponent({
     hide() {
       const { onHide } = this.data.internalProps
       if (onHide) onHide()
+      clearTimeout(this.autoHideTimer)
       const internalProps = {...this.data.internalProps, visible: false}
       this.setData({ internalProps })
     },
@@ -73,6 +74,13 @@ Component(FiatComponent({
       this.show({
         message,
         type: 'error',
+        ...options,
+      })
+    },
+    success(message, options={}) {
+      this.show({
+        message,
+        type: 'success',
         ...options,
       })
     }

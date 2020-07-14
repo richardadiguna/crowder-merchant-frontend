@@ -59,5 +59,12 @@ Page({
     this.toastRef.error('Placeholder for 2- line message here. Please put your message here. Please put your message here.', {
       icon: 'dana-coin',
     })
+  },
+  handleToastRefCustom() {
+    this.toastRef.success('Placeholder for 2- line message here. Please put your message here. ', {
+      onHide: () => {
+        my.alert({ title: 'Toast Ref', content: 'Toast hide callback', buttonText: 'Okay' })
+      },
+    })
   }
 });
