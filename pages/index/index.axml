@@ -3,4 +3,10 @@
   <f-btn type="secondary" size="small">
     <navigator url="/pages/fiat/index/index">go to FIAT components main page</navigator>
   </f-btn>
+  <f-input 
+    placeholder="example placeholder" 
+    label="example label"
+    class="mt-16"
+  >
+  </f-input>
 </view>

@@ -3,6 +3,33 @@
   display: flex;
   width: 100%;
 }
+
+.f-input__text-box {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  position: relative;
+}
+
+.f-input__label {
+  font-family: OpenSans, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  margin-bottom: 4px;
+}
+
+.f-input__container{
+  position:relative;
+  width:100%
+}
+
+.f-input__wrapper{
+  position:relative;
+  display:flex;
+  width:100%
+}
+
 .f-input input {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, sans-serif;
   color: #313131;
@@ -27,28 +54,14 @@
     box-shadow: none;
 }
 
-.f-input__text-box {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  position: relative;
-}
-
-.f-input__label {
-  font-family: OpenSans, sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 1.29;
-  margin-bottom: 4px;
-}
-
 .f-input__clear-button{
   position:absolute;
-  right:40px;
+  right: 8px;
+  top: 10px;
   width:24px;
   height:24px
 }
-.f-input__clear-button img{
+.f-input__clear-button image{
   position:absolute;
   top:50%;
   left:50%;
@@ -85,13 +98,4 @@
 .f-input__helper-error .f-input__helper-icon{
   width:16px;
   height:16px
-}
-.f-input__wrapper{
-  position:relative;
-  display:flex;
-  width:100%
-}
-.f-input__container{
-  position:relative;
-  width:100%
 }

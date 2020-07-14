@@ -1,15 +1,28 @@
-<view
-  class="f-input"
->
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-input', className) }}">
   <view class="f-input__text-box">
     <label class="f-input__label">{{label}}</label>
-    <input 
-      type="{{type}}"
-      maxlength="{{maxlength}}"
-      placeholder="{{placeholder}}"
-      onFocus="onInputFocus"
-      onBlur="onInputBlur"
-      class="{{focusClass}}"
-    />   
+    <view class="f-input__container">
+      <view class="f-input__wrapper">
+        <input
+          value="{{inputValue}}"
+          type="{{type}}"
+          maxlength="{{maxlength}}"
+          placeholder="{{placeholder}}"
+          onFocus="onInputFocus"
+          onBlur="onInputBlur"
+          onInput="onInput"
+          class="{{focusClass}}"
+        />
+        <view
+          a:if="{{showClearIcon}}" 
+          class="f-input__clear-button"
+          onTap="onClearIconTap"
+        >
+          <image src="/components/fiat/assets/o-filled.svg"/>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
