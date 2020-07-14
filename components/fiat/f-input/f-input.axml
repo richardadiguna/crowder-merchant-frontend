@@ -1,0 +1,15 @@
+<view
+  class="f-input"
+>
+  <view class="f-input__text-box">
+    <label class="f-input__label">{{label}}</label>
+    <input 
+      type="{{type}}"
+      maxlength="{{maxlength}}"
+      placeholder="{{placeholder}}"
+      onFocus="onInputFocus"
+      onBlur="onInputBlur"
+      class="{{focusClass}}"
+    />   
+  </view>
+</view>

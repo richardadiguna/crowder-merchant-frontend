@@ -1,0 +1,15 @@
+<view class="f-body m-16">
+  <f-input 
+    placeholder="example placeholder" 
+    label="example label"
+    class="mb-16"
+  >
+  </f-input>
+  
+  <input placeholder="Here the focus is obtained only when the button below is clicked" focus="{{focus}}" />
+  <input maxlength="10" placeholder="maximum entered length 10" />
+  <input onInput="bindKeyInput" placeholder="entry synchronized to view"/>
+  <input type="number" placeholder="This is a numeral entry box" />
+  <input password type="text" placeholder="This is a password entry box" />
+  <input type="digit" placeholder="numeral keyboard with decimal"/>
+</view>

@@ -4,7 +4,8 @@
     "pages/fiat/button/button",
     "pages/fiat/cell/cell",
     "pages/fiat/index/index",
-    "pages/fiat/toast/toast"
+    "pages/fiat/toast/toast",
+    "pages/fiat/input/input"
   ],
   "window": {
     "defaultTitle": "DANA Mini Biller Template",
