@@ -1,4 +1,8 @@
 <view>
+  <view class="title-16 mt-20 mb-16 f-text-center">
+    <text>Toast with component props</text>
+  </view>
+
   <f-toast type="spin" visible="{{ isToastSpinVisible }}"/>
   <f-btn onTap="handleToastSpin">
     Spinner
@@ -40,7 +44,7 @@
     Snackbar
   </f-btn>
 
-  <view class="title-16 mt-20 mb-16 f-text-center">
+  <view class="title-16 mt-32 mb-16 f-text-center">
     <text>Toast with ref</text>
   </view>
   <f-toast ref="saveToastRef"/>
@@ -49,5 +53,8 @@
   </f-btn>
   <f-btn onTap="handleToastRefWarning">
     Toast default
+  </f-btn>
+  <f-btn onTap="handleToastRefIcon">
+    Toast with icon
   </f-btn>
 </view>

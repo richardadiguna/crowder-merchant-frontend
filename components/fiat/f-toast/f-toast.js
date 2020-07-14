@@ -41,14 +41,12 @@ Component(FiatComponent({
     },
     show(options={}) {
       const { type, message, duration, actionText, icon, snackbar } = options
-      const internalProps = {
-        ...this.data.internalProps,
-        type,
-        message,
-        duration,
-        actionText,
-        icon,
-        snackbar
+      const internalProps = {...this.data.internalProps}
+      const keys = Object.keys(options)
+      for (let i=0; i<keys.length; i++) {
+        const key = keys[i]
+        if (options[key] === null) continue
+        internalProps[key] = options[key]
       }
       internalProps.visible = true
       this.setData({ internalProps })
@@ -65,10 +63,16 @@ Component(FiatComponent({
       })
     },
     warning(message, options={}) {
-      const target = { type: 'warning', icon: 'f-warning' }
       this.show({
         message,
         type: 'warning',
+        ...options,
+      })
+    },
+    error(message, options={}) {
+      this.show({
+        message,
+        type: 'error',
         ...options,
       })
     }

@@ -48,8 +48,16 @@ Page({
   },
   handleToastRefSpin() {
     this.toastRef.spin()
+    setTimeout(() => {
+      this.toastRef && this.toastRef.hide()
+    }, 2000)
   },
   handleToastRefWarning() {
     this.toastRef.warning('Placeholder for message here', { duration: 1000 })
   },
+  handleToastRefIcon() {
+    this.toastRef.error('Placeholder for 2- line message here. Please put your message here. Please put your message here.', {
+      icon: 'dana-coin',
+    })
+  }
 });
