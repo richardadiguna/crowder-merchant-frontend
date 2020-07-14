@@ -36,11 +36,11 @@ Component(FiatComponent({
       }
     },
     onAction() {
-      const { onAction } = this.props
+      const { onAction } = this.data.internalProps
       if (onAction) onAction()
     },
     show(options={}) {
-      const { type, message, duration, actionText, icon, snackbar } = options
+      this.reset()
       const internalProps = {...this.data.internalProps}
       const keys = Object.keys(options)
       for (let i=0; i<keys.length; i++) {
@@ -54,8 +54,11 @@ Component(FiatComponent({
     hide() {
       const { onHide } = this.data.internalProps
       if (onHide) onHide()
+      this.reset()
+    },
+    reset() {
       clearTimeout(this.autoHideTimer)
-      const internalProps = {...this.data.internalProps, visible: false}
+      const internalProps = {...this.data.initialProps}
       this.setData({ internalProps })
     },
     spin() {

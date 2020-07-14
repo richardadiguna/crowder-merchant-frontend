@@ -20,6 +20,7 @@ const FiatComponent = (component) => {
 
   if (internalProps) {
     data.internalProps = {}
+    data.initialProps = {...internalProps}
     const keys = Object.keys(internalProps)
     for (let i=0; i<keys.length; i++) {
       const key = keys[i]

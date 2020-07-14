@@ -66,5 +66,18 @@ Page({
         my.alert({ title: 'Toast Ref', content: 'Toast hide callback', buttonText: 'Okay' })
       },
     })
-  }
+  },
+  handleToastRefSnackbar() {
+    this.toastRef.success('Placeholder for 2- line message here. Please put your message here. ', {
+      snackbar: true,
+      actionText: 'ACTION',
+      duration: 5000,
+      onAction: () => {
+        my.alert({ title: 'Toast Ref', content: 'this is onAction callback', buttonText: 'Okay' })
+      },
+      onHide: () => {
+        my.alert({ title: 'Toast Ref', content: 'Toast hide callback', buttonText: 'Okay' })
+      },
+    })
+  },
 });

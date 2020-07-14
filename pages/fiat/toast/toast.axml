@@ -60,4 +60,7 @@
   <f-btn onTap="handleToastRefCustom">
     Toast callback
   </f-btn>
+  <f-btn onTap="handleToastRefSnackbar">
+    Snackbar
+  </f-btn>
 </view>
