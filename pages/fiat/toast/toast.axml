@@ -47,4 +47,7 @@
   <f-btn onTap="handleToastRefSpin">
     Spinner
   </f-btn>
+  <f-btn onTap="handleToastRefWarning">
+    Toast default
+  </f-btn>
 </view>

@@ -7,6 +7,8 @@ Page({
     isToastSnackbarVisible: false,
   },
   onLoad() {},
+
+  // Using component props
   handleToastSpin() {
     this.setData({ isToastSpinVisible: true })
   },
@@ -40,10 +42,14 @@ Page({
     my.alert({ title: 'Toast snackbar', content: 'this is onAction callback', buttonText: 'Okay' })
   },
 
+  // Using ref
   saveToastRef(ref) {
     this.toastRef = ref
   },
   handleToastRefSpin() {
     this.toastRef.spin()
-  }
+  },
+  handleToastRefWarning() {
+    this.toastRef.warning('Placeholder for message here', { duration: 1000 })
+  },
 });
