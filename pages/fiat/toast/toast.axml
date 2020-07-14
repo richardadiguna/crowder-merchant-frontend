@@ -1,9 +1,9 @@
-<view>
+<view class="f-body m-16">
   <f-toast type="spin" visible="{{ isToastSpinVisible }}"/>
   <f-btn onTap="handleToastSpin">
     Spinner
   </f-btn>
-
+  
   <f-toast type="warning"
     visible="{{ isToastWarningVisible }}"
     message="Placeholder for message here"
