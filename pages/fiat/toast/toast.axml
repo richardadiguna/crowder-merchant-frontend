@@ -39,4 +39,12 @@
   <f-btn onTap="showToastSnackbar">
     Snackbar
   </f-btn>
+
+  <view class="title-16 mt-20 mb-16 f-text-center">
+    <text>Toast with ref</text>
+  </view>
+  <f-toast ref="saveToastRef"/>
+  <f-btn onTap="handleToastRefSpin">
+    Spinner
+  </f-btn>
 </view>

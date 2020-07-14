@@ -38,5 +38,12 @@ Page({
   },
   handleToastSnackbarAction() {
     my.alert({ title: 'Toast snackbar', content: 'this is onAction callback', buttonText: 'Okay' })
+  },
+
+  saveToastRef(ref) {
+    this.toastRef = ref
+  },
+  handleToastRefSpin() {
+    this.toastRef.spin()
   }
 });

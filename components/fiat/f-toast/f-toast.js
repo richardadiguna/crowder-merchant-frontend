@@ -1,9 +1,7 @@
 import FiatComponent from '../core/fiat-component'
 
 Component(FiatComponent({
-  mixins: [],
-  data: {},
-  props: {
+  internalProps: {
     type: '',
     visible: false,
     message: '',
@@ -11,6 +9,8 @@ Component(FiatComponent({
     onAction: null,
     duration: 2500,
   },
+  mixins: [],
+  data: {},
   didMount() {
     this.autoHide()
   },
@@ -22,7 +22,7 @@ Component(FiatComponent({
   },
   methods: {
     autoHide() {
-      const { type, visible, duration, onHide } = this.props
+      const { type, visible, duration, onHide } = this.data.internalProps
       if (type === 'spin') return
       if (visible) {
         this.autoHideTimer = setTimeout(() => {
@@ -35,6 +35,17 @@ Component(FiatComponent({
     onAction() {
       const { onAction } = this.props
       if (onAction) onAction()
+    },
+    show(options={}) {
+      const { type } = options
+      const internalProps = {...this.data.internalProps, type}
+      internalProps.visible = true
+      this.setData({ internalProps })
+    },
+    spin() {
+      this.show({
+        type: 'spin',
+      })
     }
   },
 }));
