@@ -15,16 +15,16 @@ Component(FiatComponent({
   mixins: [],
   data: {},
   didMount() {
-    this.autoHide()
+    this._autoHide()
   },
   didUpdate() {
-    this.autoHide()
+    this._autoHide()
   },
   didUnmount() {
     clearTimeout(this.autoHideTimer)
   },
   methods: {
-    autoHide() {
+    _autoHide() {
       const { type, visible, duration } = this.data.internalProps
       if (type === 'spin') return
       if (visible) {
