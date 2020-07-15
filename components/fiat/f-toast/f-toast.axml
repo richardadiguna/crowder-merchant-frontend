@@ -2,7 +2,7 @@
 
 <view class="{{ element.classAttr('f-toast ' + internalProps.type + (internalProps.snackbar ? ' f-toast-snackbar' : ''), className) }}"
   style="display: {{ internalProps.visible ? 'flex' : 'none' }};">
-  <view class="f-toast-inner-container" style="{{ internalProps.type === 'spin' ? 'background: none;' : '' }}">
+  <view class="f-toast-inner-container">
     <transition name="f-fade" a:if="{{ internalProps.type === 'spin' }}" visible="{{ internalProps.type === 'spin' && !leaving }}">
       <f-overlay slot-scope="props"
         class="{{ props.transitionClass }}"
@@ -13,9 +13,9 @@
     </transition>
     <transition name="f-alert" visible="{{ internalProps.type !== 'spin' && !leaving }}">
       <view a:if="{{ internalProps.type !== 'spin' }}"
-        style="display: flex; align-items: center"
         slot-scope="props"
-        class="f-toast-alert-container {{ props.transitionClass }}">
+        class="f-toast-alert-container {{ props.transitionClass }}"
+        style="{{ internalProps.type === 'spin' ? 'background: none;' : '' }}">
         <view class="icon-wrapper">
           <f-icon name="{{ internalProps.icon }}" a:if="{{ internalProps.icon }}"/>
           <f-icon name="f-success" a:elif="{{ internalProps.type === 'success' }}"/>
