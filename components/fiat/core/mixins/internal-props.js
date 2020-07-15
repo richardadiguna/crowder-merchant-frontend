@@ -1,6 +1,11 @@
 function internalPropsMixin(component) {
-  const { internalProps } = component
+  const { internalProps, lockedInternalProps=[] } = component
   if (!internalProps) return {}
+
+  const _lockedInternalProps = {}
+  for (let i=0; i<lockedInternalProps.length; i++) {
+    _lockedInternalProps[lockedInternalProps[i]] = true
+  }
 
   function derivedProps(context, props) {
     const internalProps = props ? {...props} : {...context.props}
@@ -8,6 +13,9 @@ function internalPropsMixin(component) {
   }
 
   return {
+    data: {
+      _lockedInternalProps: {..._lockedInternalProps},
+    },
     onInit() {
       derivedProps(this, internalProps)
     },
@@ -19,7 +27,8 @@ function internalPropsMixin(component) {
       const keys = Object.keys(nextProps)
       for (let i=0; i<keys.length; i++) {
         const key = keys[i]
-        if (nextProps[key] === null || nextProps[key] === undefined) {
+        const isLocked = this.data._lockedInternalProps[key]
+        if (isLocked || nextProps[key] === null || nextProps[key] === undefined) {
           props[key] = this.data.internalProps[key]
         } else {
           props[key] = nextProps[key]

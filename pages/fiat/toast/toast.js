@@ -11,6 +11,9 @@ Page({
   // Using component props
   handleToastSpin() {
     this.setData({ isToastSpinVisible: true })
+    setTimeout(() => {
+      this.setData({ isToastSpinVisible: false })
+    }, 2000)
   },
   showToastWarning() {
     this.setData({ isToastWarningVisible: true })
