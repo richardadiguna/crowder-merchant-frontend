@@ -18,7 +18,7 @@ Component({
       ], () => {
         this.timer = setTimeout(() => {
           this.clearTransition()
-        }, 100) 
+        }, 300) 
       })
     } else if (this.props.visible && !nextProps.visible) {
       this._waterfall([
@@ -28,7 +28,7 @@ Component({
       ], () => {
         this.timer = setTimeout(() => {
           this.clearTransition()
-        }, 100) 
+        }, 300) 
       })
     }
   },
