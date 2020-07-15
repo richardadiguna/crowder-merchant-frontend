@@ -16,6 +16,20 @@
   <f-input 
     placeholder="example placeholder" 
     label="basic input with loader"
-    showLoader="{{true}}""
+    showLoader="{{true}}"
+    class="mb-16"
+  />
+
+  <f-input 
+    placeholder="example placeholder" 
+    label="basic input with helper text"
+    helperMsg="helper text"
+    class="mb-16"
+  />
+
+  <f-input 
+    placeholder="example placeholder" 
+    label="basic input with error"
+    errorMsg="error text"
   />
 </view>
