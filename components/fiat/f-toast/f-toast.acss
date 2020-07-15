@@ -4,6 +4,7 @@
   position: fixed;
   width: 100vw;
   top: 0px;
+  left: 0px;
 }
 
 .f-toast-inner-container {
