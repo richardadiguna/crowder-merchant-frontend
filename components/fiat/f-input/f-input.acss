@@ -65,6 +65,9 @@
 .f-input input.has-icon-inner-left {
   padding-left: 40px;
 }
+.f-input input.error {
+  border: solid 1px #ff5d55;
+}
 
 .f-input__clear-button{
   position:absolute;
@@ -139,7 +142,6 @@
 
 .f-input__helper-default{
   font-family:-apple-system,system-ui,BlinkMacSystemFont,Roboto,sans-serif;
-  color:#313131;
   font-weight:400;
   font-size:12px;
   line-height:1.34;
@@ -148,13 +150,8 @@
   margin-top:2px;
   color:#727272
 }
-.f-input__helper-default .f-input__helper-icon{
-  width:16px;
-  height:16px
-}
 .f-input__helper-error{
   font-family:-apple-system,system-ui,BlinkMacSystemFont,Roboto,sans-serif;
-  color:#313131;
   font-weight:400;
   font-size:12px;
   line-height:1.34;
@@ -162,8 +159,4 @@
   justify-content:space-between;
   margin-top:2px;
   color:#ff5d55
-}
-.f-input__helper-error .f-input__helper-icon{
-  width:16px;
-  height:16px
 }
