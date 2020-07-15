@@ -5,6 +5,9 @@
     <label class="f-input__label">{{label}}</label>
     <view class="f-input__container">
       <view class="f-input__wrapper">
+        <view class="f-input__icon-inner-left m-10">
+          <slot name="iconInnerLeft" />
+        </view>
         <input
           value="{{inputValue}}"
           type="{{type}}"
@@ -13,7 +16,7 @@
           onFocus="onInputFocus"
           onBlur="onInputBlur"
           onInput="onInput"
-          class="{{focusClass}}"
+          class="{{cssClass}}"
         />
         <view
           a:if="{{showClearIcon}}" 
@@ -22,6 +25,10 @@
         >
           <image src="/components/fiat/assets/o-filled.svg"/>
         </view>
+        <image
+          a:if="{{showLoader}}"
+          class="f-input__loader"
+          src="/components/fiat/assets/spin.svg"/>
       </view>
     </view>
   </view>

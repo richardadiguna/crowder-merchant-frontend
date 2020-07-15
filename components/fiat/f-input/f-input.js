@@ -5,32 +5,41 @@ Component(FiatComponent({
   data: {
     inputValue: '',
     showClearIcon: false,
-    focusClass: ''
+    cssClass: ''
   },
   props: {
     type: 'text', // text || number || digit
     maxlength: 140,
-    placeholder: ''
+    placeholder: '',
+    showLoader: false
   },
-  didMount() {},
+  didMount() {
+    const currentCssClass = this.data.cssClass
+    const iconInnerLeft = this.props.$slots.iconInnerLeft
+    iconInnerLeft && iconInnerLeft.length > 0 && this.setData({
+      cssClass: currentCssClass + ' has-icon-inner-left'
+    })
+  },
   didUpdate() {},
   didUnmount() {},
   methods: {
     onInputFocus () {
+      const currentCssClass = this.data.cssClass
       this.setData({
-        focusClass: 'focus'
+        cssClass: currentCssClass + ' focus'
       });
     },
     onInputBlur () {
+      const currentCssClass = this.data.cssClass
       this.setData({
-        focusClass: ''
+        cssClass: currentCssClass.replace(' focus', '')
       });
     },
     onInput (e) {
       this.setData({
         inputValue: e.detail.value
       })
-      if (e.detail.value) {
+      if (e.detail.value && !this.props.showLoader) {
         this.setData({
           showClearIcon: true
         })

@@ -8,7 +8,7 @@
     "pages/fiat/input/input"
   ],
   "window": {
-    "defaultTitle": "DANA Mini Biller Template",
+    "defaultTitle": "Service Name",
     "titleBarColor": "#108EE9"
   }
 }
