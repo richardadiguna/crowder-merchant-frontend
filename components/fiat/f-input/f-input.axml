@@ -25,6 +25,10 @@
         >
           <image src="/components/fiat/assets/o-filled.svg"/>
         </view>
+        <image
+          a:if="{{showLoader}}"
+          class="f-input__loader"
+          src="/components/fiat/assets/spin.svg"/>
       </view>
     </view>
   </view>

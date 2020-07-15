@@ -5,5 +5,4 @@
   <f-btn type="secondary" size="small">
     <navigator url="/pages/fiat/index/index">go to FIAT components main page</navigator>
   </f-btn>
-  
 </view>

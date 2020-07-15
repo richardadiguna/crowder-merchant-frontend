@@ -10,7 +10,8 @@ Component(FiatComponent({
   props: {
     type: 'text', // text || number || digit
     maxlength: 140,
-    placeholder: ''
+    placeholder: '',
+    showLoader: false
   },
   didMount() {
     const currentCssClass = this.data.cssClass
@@ -38,7 +39,7 @@ Component(FiatComponent({
       this.setData({
         inputValue: e.detail.value
       })
-      if (e.detail.value) {
+      if (e.detail.value && !this.props.showLoader) {
         this.setData({
           showClearIcon: true
         })
