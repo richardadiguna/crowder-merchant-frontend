@@ -1,38 +1,41 @@
 import FiatComponent from '../core/fiat-component'
+import addClass from '/utils/addClass'
+import removeClass from '/utils/removeClass'
 
 Component(FiatComponent({
   mixins: [],
   data: {
     inputValue: '',
     showClearIcon: false,
-    cssClass: ''
+    inputCssClass: ''
   },
   props: {
     type: 'text', // text || number || digit
     maxlength: 140,
     placeholder: '',
-    showLoader: false
+    showLoader: false,
+    helperMsg: '',
+    errorMsg: '',
   },
   didMount() {
-    const currentCssClass = this.data.cssClass
-    const iconInnerLeft = this.props.$slots.iconInnerLeft
-    iconInnerLeft && iconInnerLeft.length > 0 && this.setData({
-      cssClass: currentCssClass + ' has-icon-inner-left'
-    })
+    this.setIconInnerLeftStyle()
+    this.setErrorStyle()
   },
-  didUpdate() {},
+  didUpdate() {
+    this.setErrorStyle()
+  },
   didUnmount() {},
   methods: {
     onInputFocus () {
-      const currentCssClass = this.data.cssClass
+      const { inputCssClass } = this.data
       this.setData({
-        cssClass: currentCssClass + ' focus'
+        inputCssClass: addClass(inputCssClass, 'focus')
       });
     },
     onInputBlur () {
-      const currentCssClass = this.data.cssClass
+      const { inputCssClass } = this.data
       this.setData({
-        cssClass: currentCssClass.replace(' focus', '')
+        inputCssClass: removeClass(inputCssClass, 'focus')
       });
     },
     onInput (e) {
@@ -49,10 +52,29 @@ Component(FiatComponent({
         })
       }
     },
-    onClearIconTap (e) {
+    onClearIconTap () {
       this.setData({
         inputValue: '',
       })
+    },
+    setIconInnerLeftStyle () {
+      const { inputCssClass } = this.data
+      const iconInnerLeft = this.props.$slots.iconInnerLeft
+      iconInnerLeft && iconInnerLeft.length > 0 && this.setData({
+        inputCssClass: addClass(inputCssClass, 'has-icon-inner-left')
+      })
+    },
+    setErrorStyle () {
+      const { inputCssClass } = this.data
+      if (this.props.errorMsg) {
+        this.setData({
+          inputCssClass: addClass(inputCssClass, 'error')
+        })
+      } else {
+        this.setData({
+          inputCssClass: removeClass(inputCssClass, 'error')
+        })
+      }
     }
   },
 }));
