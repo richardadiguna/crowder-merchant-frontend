@@ -11,24 +11,24 @@ Component({
   },
   deriveDataFromProps(nextProps) {
     if (!this.props.visible && nextProps.visible) {
-      this.updateTransition(['enter','enter-active'], () => {
-        this.updateTransition(['enter-to','enter-active'], () => {
-          this.setData({ slotVisible: true }, () => {
-            this.timer = setTimeout(() => {
-              this.clearTransition()
-            }, 100)
-          })
-        })
+      this._waterfall([
+        ['updateTransition', ['enter', 'enter-active']],
+        ['updateTransition', ['enter-to', 'enter-active']],
+        ['setData', { slotVisible: true }]
+      ], () => {
+        this.timer = setTimeout(() => {
+          this.clearTransition()
+        }, 100) 
       })
     } else if (this.props.visible && !nextProps.visible) {
-      this.updateTransition(['leave','leave-active'], () => {
-        this.updateTransition(['leave-to','leave-active'], () => {
-          this.setData({ slotVisible: false }, () => {
-            this.timer = setTimeout(() => {
-              this.clearTransition()
-            }, 100)
-          })
-        })
+      this._waterfall([
+        ['updateTransition', ['leave', 'leave-active']],
+        ['updateTransition', ['leave-to', 'leave-active']],
+        ['setData', { slotVisible: false }]
+      ], () => {
+        this.timer = setTimeout(() => {
+          this.clearTransition()
+        }, 100) 
       })
     }
   },
@@ -38,6 +38,22 @@ Component({
     clearTimeout(this.timer)
   },
   methods: {
+    _waterfall(tasks=[], callback) {
+      let i = 0;
+      const runTask = () => {
+        if (i >= tasks.length) {
+          if (callback) callback()
+          return
+        }
+        const task = tasks[i]
+        const [name, args] = task
+        this[name](args, () => {
+          i++
+          runTask()
+        })
+      }
+      runTask()
+    },
     clearTransition(callback) {
       this.setData({ transitionClass: ''}, () => {
         if (callback) callback()
