@@ -23,7 +23,7 @@ Component(FiatComponent({
   deriveDataFromProps(nextProps) {
     if (this.props.visible && !nextProps.visible) {
       this.setData({ leaving: true }, () => {
-        setTimeout(() => {
+        this.hideTimer = setTimeout(() => {
           const internalProps = {...this.data.internalProps, visible: false}
           this.setData({ internalProps })
         }, 150)
@@ -37,19 +37,19 @@ Component(FiatComponent({
     this._autoHide()
   },
   didUnmount() {
+    clearTimeout(this.hideTimer)
     clearTimeout(this.autoHideTimer)
     clearTimeout(this.leavingTimer)
   },
   methods: {
     _autoHide() {
+      clearTimeout(this.autoHideTimer)
       const { type, visible, duration } = this.data.internalProps
       if (type === 'spin') return
       if (visible) {
         this.autoHideTimer = setTimeout(() => {
           this.hide()
         }, parseInt(duration))
-      } else {
-        clearTimeout(this.autoHideTimer)
       }
     },
     onAction() {
@@ -69,6 +69,7 @@ Component(FiatComponent({
       this.setData({ internalProps, leaving: false })
     },
     hide(callback) {
+      clearTimeout(this.leavingTimer)
       this.setData({ leaving: true }, () => {
         this.leavingTimer = setTimeout(() => {
           const { onHide } = this.data.internalProps
@@ -79,6 +80,7 @@ Component(FiatComponent({
       })
     },
     reset() {
+      clearTimeout(this.hideTimer)
       clearTimeout(this.autoHideTimer)
       const internalProps = {...this.data.initialProps}
       this.setData({ internalProps })
