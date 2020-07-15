@@ -15,7 +15,7 @@
       <view a:if="{{ internalProps.type !== 'spin' }}"
         style="display: flex; align-items: center"
         slot-scope="props"
-        class="{{ props.transitionClass }}">
+        class="f-toast-alert-container {{ props.transitionClass }}">
         <view class="icon-wrapper">
           <f-icon name="{{ internalProps.icon }}" a:if="{{ internalProps.icon }}"/>
           <f-icon name="f-success" a:elif="{{ internalProps.type === 'success' }}"/>
