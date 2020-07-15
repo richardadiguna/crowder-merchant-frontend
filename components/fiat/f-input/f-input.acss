@@ -30,6 +30,16 @@
   width:100%
 }
 
+.f-input__icon-inner-left {
+  position: absolute;
+  z-index: 1;
+}
+.f-input__icon-inner-left image,
+.f-input__icon-inner-left view {
+  max-height: 21px;
+  max-width: 21px;
+}
+
 .f-input input {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, sans-serif;
   color: #313131;
@@ -47,11 +57,13 @@
   box-sizing: border-box;
   height: 42px;
 }
-
 .f-input input.focus {
-    border: solid 1px #fb8b01;
-    outline: none;
-    box-shadow: none;
+  border: solid 1px #fb8b01;
+  outline: none;
+  box-shadow: none;
+}
+.f-input input.has-icon-inner-left {
+  padding-left: 40px;
 }
 
 .f-input__clear-button{
