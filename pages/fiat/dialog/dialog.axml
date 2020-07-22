@@ -1,0 +1,21 @@
+<view>
+  <f-btn onTap="showDialog2" type="primary">
+    Dialog-2 using methods
+  </f-btn>
+
+  <f-dialog ref="saveRefDialog2">
+    <f-card>
+      <f-card-content>
+        Dialog-2 using methods
+      </f-card-content>
+      <f-card-actions>
+        <f-btn onTap="closeDialog2" type="secondary">
+          Cancel
+        </f-btn>
+        <f-btn onTap="closeDialog2" type="primary">
+          Ok
+        </f-btn>
+      </f-card-actions>
+    </f-card>
+  </f-dialog>
+</view>
