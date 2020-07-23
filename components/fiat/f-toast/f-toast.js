@@ -12,27 +12,44 @@ Component(FiatComponent({
     icon: '',
     snackbar: false,
   },
+  lockedInternalProps: ['visible'],
   mixins: [],
-  data: {},
+  data: {
+    leaving: true,
+  },
   didMount() {
     this._autoHide()
+  },
+  deriveDataFromProps(nextProps) {
+    if (this.props.visible && !nextProps.visible) {
+      this.setData({ leaving: true }, () => {
+        this.hideTimer = setTimeout(() => {
+          const internalProps = {...this.data.internalProps, visible: false}
+          this.setData({ internalProps })
+        }, 150)
+      })
+    } else if (!this.props.visible && nextProps.visible) {
+      const internalProps = {...this.data.internalProps, visible: true }
+      this.setData({ leaving: false, internalProps })
+    }
   },
   didUpdate() {
     this._autoHide()
   },
   didUnmount() {
+    clearTimeout(this.hideTimer)
     clearTimeout(this.autoHideTimer)
+    clearTimeout(this.leavingTimer)
   },
   methods: {
     _autoHide() {
+      clearTimeout(this.autoHideTimer)
       const { type, visible, duration } = this.data.internalProps
       if (type === 'spin') return
       if (visible) {
         this.autoHideTimer = setTimeout(() => {
           this.hide()
         }, parseInt(duration))
-      } else {
-        clearTimeout(this.autoHideTimer)
       }
     },
     onAction() {
@@ -49,14 +66,21 @@ Component(FiatComponent({
         internalProps[key] = options[key]
       }
       internalProps.visible = true
-      this.setData({ internalProps })
+      this.setData({ internalProps, leaving: false })
     },
-    hide() {
-      const { onHide } = this.data.internalProps
-      if (onHide) onHide()
-      this.reset()
+    hide(callback) {
+      clearTimeout(this.leavingTimer)
+      this.setData({ leaving: true }, () => {
+        this.leavingTimer = setTimeout(() => {
+          const { onHide } = this.data.internalProps
+          if (onHide) onHide()
+          this.reset()
+          if (callback) callback()
+        }, 150)
+      })
     },
     reset() {
+      clearTimeout(this.hideTimer)
       clearTimeout(this.autoHideTimer)
       const internalProps = {...this.data.initialProps}
       this.setData({ internalProps })
