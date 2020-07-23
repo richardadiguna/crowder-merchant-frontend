@@ -2,30 +2,52 @@ import FiatComponent from '../core/fiat-component'
 
 Component(FiatComponent({
   mixins: [],
-  data: {
+  internalProps: {
     visible: false,
+  },
+  lockedInternalProps: ['visible'],
+  data: {
+    leaving: true,
   },
   props: {
     dismissable: true,
     type: '',
   },
-  internalProps: {
-    visible: false,
-  },
   didMount() {},
   didUpdate() {},
-  didUnmount() {},
+  didUnmount() {
+    clearTimeout(this.hideTimer)
+  },
+  deriveDataFromProps(nextProps) {
+    if (this.props.visible && !nextProps.visible) {
+      this.setData({ leaving: true }, () => {
+        clearTimeout(this.hideTimer)
+        this.hideTimer = setTimeout(() => {
+          const internalProps = {...this.data.internalProps, visible: false}
+          this.setData({ internalProps })
+        }, 150)
+      })
+    } else if (!this.props.visible && nextProps.visible) {
+      const internalProps = {...this.data.internalProps, visible: true }
+      this.setData({ leaving: false, internalProps })
+    }
+  },
   methods: {
     saveOverlayRef(ref) {
       this.overlayRef = ref
     },
     show() {
       const internalProps = {...this.data.internalProps, visible: true}
-      this.setData({ internalProps })
+      this.setData({ internalProps, leaving: false })
     },
     hide() {
-      const internalProps = {...this.data.internalProps, visible: false}
-      this.setData({ internalProps })
+      this.setData({ leaving: true }, () => {
+        clearTimeout(this.hideTimer);
+        this.hideTimer = setTimeout(() => {
+          const internalProps = {...this.data.internalProps, visible: false}
+          this.setData({ internalProps })
+        }, 150)
+      })
     },
     dismiss() {
       this.props.dismissable && this.hide()
