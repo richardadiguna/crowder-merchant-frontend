@@ -1,16 +1,12 @@
 <view class="f-dialog">
-  <!-- <slot
-    name="activator"
-    v-bind="{ on: { click: show, ...$listeners } }"
-  /> -->
-  <transition name="f-fade" visible="{{ visible }}">
+  <transition name="f-fade" visible="{{ internalProps.visible }}">
     <f-overlay
-      a:if="{{ visible }}"
+      a:if="{{ internalProps.visible }}"
       onTap="dismiss"
       ref="saveOverlayRef"/>
   </transition>
   <transition name="f-alert-dialog">
-    <view a:if="{{ visible }}"
+    <view a:if="{{ internalProps.visible }}"
       class="f-dialog__container f-dialog__container--{{ type }}">
       <view class="f-dialog__container__inner">
         <slot/>

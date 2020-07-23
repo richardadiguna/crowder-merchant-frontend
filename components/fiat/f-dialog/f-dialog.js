@@ -9,6 +9,9 @@ Component(FiatComponent({
     dismissable: true,
     type: '',
   },
+  internalProps: {
+    visible: false,
+  },
   didMount() {},
   didUpdate() {},
   didUnmount() {},
@@ -17,10 +20,12 @@ Component(FiatComponent({
       this.overlayRef = ref
     },
     show() {
-      this.setData({ visible: true })
+      const internalProps = {...this.data.internalProps, visible: true}
+      this.setData({ internalProps })
     },
     hide() {
-      this.setData({ visible: false })
+      const internalProps = {...this.data.internalProps, visible: false}
+      this.setData({ internalProps })
     },
     dismiss() {
       this.props.dismissable && this.hide()

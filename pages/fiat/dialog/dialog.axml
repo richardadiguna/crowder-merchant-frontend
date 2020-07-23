@@ -18,4 +18,25 @@
       </f-card-actions>
     </f-card>
   </f-dialog>
+
+
+  <f-btn onTap="showDialog3" type="primary">
+    Dialog-3 using with data binding
+  </f-btn>
+
+  <f-dialog visible="{{ dialog3Visible }}">
+    <f-card class="p-16">
+      <f-card-content>
+        Dialog-3 using data binding
+      </f-card-content>
+      <f-card-actions>
+        <f-btn onTap="closeDialog3" type="secondary">
+          Cancel
+        </f-btn>
+        <f-btn onTap="closeDialog3" type="primary">
+          Ok
+        </f-btn>
+      </f-card-actions>
+    </f-card>
+  </f-dialog>
 </view>
