@@ -1,0 +1,16 @@
+<view class="f-dialog" style="display: {{ internalProps.visible ? 'block' : 'none' }};">
+  <transition name="f-fade" visible="{{ !leaving }}">
+    <f-overlay slot-scope="props"
+      class="{{ props.transitionClass }}"
+      onTap="dismiss"
+      ref="saveOverlayRef"/>
+  </transition>
+  <transition name="f-alert-dialog" visible="{{ !leaving }}">
+    <view slot-scope="props"
+      class="f-dialog__container f-dialog__container--{{ type }} {{ props.transitionClass }}">
+      <view class="f-dialog__container__inner">
+        <slot/>
+      </view>
+    </view>
+  </transition>
+</view>

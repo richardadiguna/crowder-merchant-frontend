@@ -7,6 +7,9 @@
     <navigator url="/pages/fiat/cell/cell">Cell</navigator>
   </f-btn>
   <f-btn type="secondary" size="small" class="mb-16">
+    <navigator url="/pages/fiat/dialog/dialog">Dialog</navigator>
+  </f-btn>
+  <f-btn type="secondary" size="small" class="mb-16">
     <navigator url="/pages/fiat/toast/toast">Toast</navigator>
   </f-btn>
   <f-btn type="secondary" size="small">
