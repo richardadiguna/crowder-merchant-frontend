@@ -23,7 +23,7 @@
           class="f-input__clear-button"
           onTap="onClearIconTap"
         >
-          <image src="/components/fiat/assets/o-filled.svg"/>
+          <image src="/components/fiat/assets/close.svg"/>
         </view>
         <image
           a:if="{{showLoader}}"
