@@ -40,6 +40,12 @@
   max-width: 21px;
 }
 
+.f-input__icon-outter-right view,
+.f-input__icon-outter-right image {
+  max-height: 28px;
+  max-width: 28px;
+}
+
 .f-input input {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, sans-serif;
   color: #313131;

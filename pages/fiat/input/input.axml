@@ -31,5 +31,17 @@
     placeholder="example placeholder" 
     label="basic input with error"
     errorMsg="error text"
+    class="mb-16"
   />
+
+  <f-input 
+    placeholder="example placeholder" 
+    label="basic input iwth outer icon right"
+  >
+    <image
+      src="/components/fiat/assets/question.svg"
+      slot="iconOutterRight"
+      onTap="handleTapIconOutterRight"
+    />
+  </f-input>
 </view>

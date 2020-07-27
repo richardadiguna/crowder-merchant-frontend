@@ -23,7 +23,7 @@
           class="f-input__clear-button"
           onTap="onClearIconTap"
         >
-          <image src="/components/fiat/assets/o-filled.svg"/>
+          <image src="/components/fiat/assets/close.svg"/>
         </view>
         <image
           a:if="{{showLoader}}"
@@ -31,9 +31,12 @@
           src="/components/fiat/assets/spin.svg"/>
       </view>
       <view a:if="{{helperMsg || errorMsg}}">
-        <text a:if="{{!errorMsg}}"" class="f-input__helper-default">{{helperMsg}}</text>
+        <text a:if="{{!errorMsg}}" class="f-input__helper-default">{{helperMsg}}</text>
         <text class="f-input__helper-error">{{errorMsg}}</text>
       </view>
     </view>
+  </view>
+  <view class="f-input__icon-outter-right ml-8 mt-28">
+    <slot name="iconOutterRight" />
   </view>
 </view>
