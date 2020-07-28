@@ -12,12 +12,22 @@
 .f-btn-primary {
   color: #FFF;
   background-color: #108ee9;
+} 
+
+.f-btn-primary[disabled] {
+  color: #FFF;
+  background-color: #bfbfbf;
 }
 
 .f-btn-secondary {
   color: #108ee9;
   background-color: #ffffff;
   border: solid 0.01rem #108ee9;
+}
+
+.f-btn-secondary[disabled]  {
+  color: #bfbfbf;
+  border-color: #e3e3e3;
 }
 
 .f-btn-large {
