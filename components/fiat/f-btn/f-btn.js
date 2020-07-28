@@ -8,7 +8,8 @@ Component(FiatComponent({
   props: {
     type: 'primary',
     size: 'large',
-    uppercase: false
+    uppercase: false,
+    disabled: false,
   },
   didMount() {
     const { props } = this
