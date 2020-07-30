@@ -88,7 +88,7 @@ Component(FiatComponent({
           break
         case 'text-field-amount': 
           this.setData({
-            inputTypeClass: 'f-input__text-field--amount'
+            inputTypeClass: 'f-input__text-field f-input__text-field--amount'
           })
           break
         default:

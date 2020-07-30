@@ -46,7 +46,7 @@
   max-width: 28px;
 }
 
-.f-input input {
+.f-input__text-box input {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, sans-serif;
   color: #313131;
   font-weight: normal;
@@ -63,7 +63,7 @@
   box-sizing: border-box;
   height: 42px;
 }
-.f-input input.focus {
+.f-input__text-box input.focus {
   border: solid 1px #fb8b01;
   outline: none;
   box-shadow: none;
@@ -165,4 +165,45 @@
   justify-content:space-between;
   margin-top:2px;
   color:#ff5d55
+}
+
+.f-input__text-field {
+  flex: 1;
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+.f-input__text-field .f-input__label {
+    font-family: OpenSans, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.34;
+    position: absolute;
+    top: 0;
+    color: #727272;
+    transition: color 0.15s linear;
+    z-index: 1;
+}
+.f-input__text-field input {
+  -webkit-appearance: none;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Roboto, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.25;
+  position: relative;
+  width: 100%;
+  padding: 19px 28px 5px 0;
+  color: #313131;
+  border: none;
+  border-bottom: solid 1px #bfbfbf;
+  transition: border-bottom 0.15s linear;
+}
+
+.f-input__text-field--amount input {
+  font-family: OpenSans, sans-serif;
+  font-weight: 600;
+  font-size: 27px;
+  line-height: 1.34;
 }
