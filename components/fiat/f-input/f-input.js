@@ -7,7 +7,8 @@ Component(FiatComponent({
   data: {
     inputValue: '',
     showClearIcon: false,
-    inputCssClass: ''
+    inputCssClass: '',
+    inputTypeClass: 'f-input__text-box'
   },
   props: {
     type: 'text', // text || number || digit
@@ -16,8 +17,10 @@ Component(FiatComponent({
     showLoader: false,
     helperMsg: '',
     errorMsg: '',
+    inputType: 'text-box' // 'text-box' || 'text-field' (not supported yet) || 'text-field-amount'
   },
   didMount() {
+    this.setInputTypeClass()
     this.setIconInnerLeftStyle()
     this.setErrorStyle()
   },
@@ -27,15 +30,15 @@ Component(FiatComponent({
   didUnmount() {},
   methods: {
     onInputFocus () {
-      const { inputCssClass } = this.data
+      const { inputTypeClass } = this.data
       this.setData({
-        inputCssClass: addClass(inputCssClass, 'focus')
+        inputTypeClass: addClass(inputTypeClass, 'f-input--focus')
       });
     },
     onInputBlur () {
-      const { inputCssClass } = this.data
+      const { inputTypeClass } = this.data
       this.setData({
-        inputCssClass: removeClass(inputCssClass, 'focus')
+        inputTypeClass: removeClass(inputTypeClass, 'f-input--focus')
       });
     },
     onInput (e) {
@@ -75,6 +78,24 @@ Component(FiatComponent({
           inputCssClass: removeClass(inputCssClass, 'error')
         })
       }
-    }
+    },
+    setInputTypeClass () {
+      switch (this.props.inputType) {
+        case 'text-field': 
+          this.setData({
+            inputTypeClass: 'f-input__text-field'
+          })
+          break
+        case 'text-field-amount': 
+          this.setData({
+            inputTypeClass: 'f-input__text-field f-input__text-field--amount'
+          })
+          break
+        default:
+          this.setData({
+            inputTypeClass: 'f-input__text-box'
+          })
+      }
+    },
   },
 }));

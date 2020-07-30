@@ -1,7 +1,7 @@
 <import-sjs name="element" from="../../../utils/element.sjs"/>
 
 <view class="{{ element.classAttr('f-input', className) }}">
-  <view class="f-input__text-box">
+  <view class="{{inputTypeClass}}">
     <label class="f-input__label">{{label}}</label>
     <view class="f-input__container">
       <view class="f-input__wrapper">
@@ -36,7 +36,7 @@
       </view>
     </view>
   </view>
-  <view class="f-input__icon-outter-right ml-8 mt-28">
+  <view class="f-input__icon-outter-right">
     <slot name="iconOutterRight" />
   </view>
 </view>
