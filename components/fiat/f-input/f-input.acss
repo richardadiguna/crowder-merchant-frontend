@@ -44,6 +44,7 @@
 .f-input__icon-outter-right image {
   max-height: 28px;
   max-width: 28px;
+  margin: 28px 0px 0px 8px;
 }
 
 .f-input__text-box input {
@@ -63,7 +64,7 @@
   box-sizing: border-box;
   height: 42px;
 }
-.f-input__text-box input.focus {
+.f-input__text-box.f-input--focus input{
   border: solid 1px #fb8b01;
   outline: none;
   box-shadow: none;
@@ -199,6 +200,17 @@
   border: none;
   border-bottom: solid 1px #bfbfbf;
   transition: border-bottom 0.15s linear;
+}
+
+.f-input__text-field.f-input--focus .f-input__label {
+  color: #fca73e;
+}
+.f-input__text-field.f-input--focus input {
+  border-bottom-color: #fca73e;
+}
+
+.f-input__text-field .f-input__clear_button {
+  top: 20px;
 }
 
 .f-input__text-field--amount input {

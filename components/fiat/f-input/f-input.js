@@ -17,7 +17,7 @@ Component(FiatComponent({
     showLoader: false,
     helperMsg: '',
     errorMsg: '',
-    inputType: 'text-box'
+    inputType: 'text-box' // 'text-box' || 'text-field' (not supported yet) || 'text-field-amount'
   },
   didMount() {
     this.setInputTypeClass()
@@ -30,15 +30,15 @@ Component(FiatComponent({
   didUnmount() {},
   methods: {
     onInputFocus () {
-      const { inputCssClass } = this.data
+      const { inputTypeClass } = this.data
       this.setData({
-        inputCssClass: addClass(inputCssClass, 'focus')
+        inputTypeClass: addClass(inputTypeClass, 'f-input--focus')
       });
     },
     onInputBlur () {
-      const { inputCssClass } = this.data
+      const { inputTypeClass } = this.data
       this.setData({
-        inputCssClass: removeClass(inputCssClass, 'focus')
+        inputTypeClass: removeClass(inputTypeClass, 'f-input--focus')
       });
     },
     onInput (e) {

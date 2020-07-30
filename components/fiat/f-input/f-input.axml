@@ -36,7 +36,7 @@
       </view>
     </view>
   </view>
-  <view class="f-input__icon-outter-right ml-8 mt-28">
+  <view class="f-input__icon-outter-right">
     <slot name="iconOutterRight" />
   </view>
 </view>

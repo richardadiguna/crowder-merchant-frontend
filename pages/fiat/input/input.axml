@@ -37,12 +37,12 @@
   <f-input 
     placeholder="example placeholder" 
     label="text-box with outer icon right"
+    class="mb-16"
   >
     <image
       src="/components/fiat/assets/question.svg"
       slot="iconOutterRight"
       onTap="handleTapIconOutterRight"
-      class="mb-16"
     />
   </f-input>
 
