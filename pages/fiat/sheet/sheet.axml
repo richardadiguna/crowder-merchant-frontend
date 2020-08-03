@@ -2,17 +2,37 @@
   <f-btn type="primary" class="mb-20" onTap="openSheet">
     Sheet
   </f-btn>
-  <f-sheet ref="saveSheetRef" roundedTop>
-    <f-card rounded-top="">
+  <f-sheet ref="saveSheetRef" roundedTop="">
+    <f-card>
       <view class="dash"/>
       <f-card-content>
-        Hello World
+        Sheet (Disimissable Overlay)
       </f-card-content>
       <f-card-actions>
         <f-btn onTap="closeSheet" type="secondary">
           Cancel
         </f-btn>
         <f-btn onTap="closeSheet" type="primary">
+          Ok
+        </f-btn>
+      </f-card-actions>
+    </f-card>
+  </f-sheet>
+
+  <f-btn type="primary" class="mb-20" onTap="openSheet2">
+    Sheet (Non Disimissable Overlay)
+  </f-btn>
+  <f-sheet ref="saveSheet2Ref" roundedTop="">
+    <f-card>
+      <view class="dash"/>
+      <f-card-content>
+        Sheet (Non Disimissable Overlay)
+      </f-card-content>
+      <f-card-actions>
+        <f-btn onTap="closeSheet2" type="secondary">
+          Cancel
+        </f-btn>
+        <f-btn onTap="closeSheet2" type="primary">
           Ok
         </f-btn>
       </f-card-actions>

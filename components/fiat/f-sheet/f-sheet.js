@@ -10,6 +10,7 @@ Component(FiatComponent({
   },
   props: {
     roundedTop: false,
+    dismissable: true,
   },
   onInit() {
     this.animation = my.createAnimation({
@@ -34,11 +35,14 @@ Component(FiatComponent({
         this.setData({ sheetClass: 'f-sheet--rounded-top' })
       }
     },
+    dismiss() {
+      this.props.dismissable && this.hide()
+    },
     show () {
       this.animation.translateY('0%').step()
       this.setData({ visible: true, leaving: false, sheetAnimation: this.animation.export() })
     },
-    dismiss () {
+    hide () {
       this.animation.translateY('80%').step()
       this.setData({ leaving: true, sheetAnimation: this.animation.export() })
       clearTimeout(this.hideTimer)

@@ -4,7 +4,7 @@
       class="{{ props.transitionClass }}"
       onTap="dismiss"/>
   </transition>
-  <view class="f-sheet {{ sheetClass }}" animation='{{ sheetAnimation }}'>
+  <view class="f-sheet {{ sheetClass }}" animation="{{ sheetAnimation }}">
     <slot/>
   </view>
 </view>
