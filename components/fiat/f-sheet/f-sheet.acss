@@ -1,0 +1,34 @@
+.f-sheet {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  height: 150%;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  z-index: 101;
+  bottom: 0px; 
+  max-height: 80vh;
+  transition-property: -webkit-transform;
+  transition-timing-function: ease;
+  will-change: transform;
+  background-color: white;
+}
+
+.f-sheet--rounded-top {
+    border-radius: .08rem .08rem 0 0;
+}
+
+.f-sheet .dash {
+  margin-top: .08rem;
+  margin-bottom: .08rem;
+}
+
+.f-sheet .dash::after {
+  content: '';
+  width: .56rem;
+  height: .04rem;
+  background-color: #e3e3e3; /* @grey-20 */
+  border-radius: .07rem;
+  display: block;
+  margin: 0 auto;
+}

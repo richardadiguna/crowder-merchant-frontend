@@ -1,0 +1,21 @@
+<view>
+  <f-btn type="primary" class="mb-20" onTap="openSheet">
+    Sheet
+  </f-btn>
+  <f-sheet ref="saveSheetRef" roundedTop>
+    <f-card rounded-top="">
+      <view class="dash"/>
+      <f-card-content>
+        Hello World
+      </f-card-content>
+      <f-card-actions>
+        <f-btn onTap="closeSheet" type="secondary">
+          Cancel
+        </f-btn>
+        <f-btn onTap="closeSheet" type="primary">
+          Ok
+        </f-btn>
+      </f-card-actions>
+    </f-card>
+  </f-sheet>
+</view>

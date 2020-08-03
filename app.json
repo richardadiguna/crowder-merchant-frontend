@@ -6,7 +6,8 @@
     "pages/fiat/index/index",
     "pages/fiat/toast/toast",
     "pages/fiat/input/input",
-    "pages/fiat/dialog/dialog"
+    "pages/fiat/dialog/dialog",
+    "pages/fiat/sheet/sheet"
   ],
   "window": {
     "defaultTitle": "Service Name",
