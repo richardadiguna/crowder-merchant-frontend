@@ -1,5 +1,5 @@
 <view class="scroll-lock-body" style="display: {{ visible ? 'block' : 'none' }};">
-  <transition name="f-fade" visible="{{ visible }}">
+  <transition name="f-fade" visible="{{ !leaving }}">
     <f-overlay slot-scope="props"
       class="{{ props.transitionClass }}"
       onTap="dismiss"/>

@@ -4,6 +4,7 @@ Component(FiatComponent({
   mixins: [],
   data: {
     visible: false,
+    leaving: true,
     sheetClass: '',
     sheetAnimation: null,
   },
@@ -35,11 +36,11 @@ Component(FiatComponent({
     },
     show () {
       this.animation.translateY('0%').step()
-      this.setData({ visible: true, sheetAnimation: this.animation.export() })
+      this.setData({ visible: true, leaving: false, sheetAnimation: this.animation.export() })
     },
     dismiss () {
       this.animation.translateY('80%').step()
-      this.setData({ sheetAnimation: this.animation.export() })
+      this.setData({ leaving: true, sheetAnimation: this.animation.export() })
       clearTimeout(this.hideTimer)
       this.hideTimer = setTimeout(() => {
         this.setData({ visible: false })
