@@ -8,9 +8,7 @@
   z-index: 101;
   bottom: 0px; 
   max-height: 80vh;
-  transition-property: -webkit-transform;
-  transition-timing-function: ease;
-  will-change: transform;
+  transform: translateY(80%);
   background-color: white;
 }
 
