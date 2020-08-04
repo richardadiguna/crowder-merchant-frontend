@@ -1,22 +1,24 @@
 import validatePropsMixin from './mixins/validate-props'
 import internalPropsMixin from './mixins/internal-props'
 
-const data = {}
 
-const props = {
-  onTap: null,
-}
-
-const methods = {
-  onTap (e) {
-    if (this.props.onTap) {
-      this.props.onTap(e)
-    }
-  },
-}
 
 const FiatComponent = (component) => {
   const { internalProps } = component
+
+  const data = {}
+
+  const props = {
+    onTap: null,
+  }
+
+  const methods = {
+    onTap (e) {
+      if (this.props.onTap) {
+        this.props.onTap(e)
+      }
+    },
+  }
 
   if (internalProps) {
     data.internalProps = {}

@@ -4,7 +4,8 @@
       class="{{ props.transitionClass }}"
       onTap="dismiss"/>
   </transition>
-  <view class="f-sheet {{ sheetClass }}" animation="{{ sheetAnimation }}">
+  <swipe disabled="{{ !swipe }}" class="f-sheet {{ sheetClass }}" animation="{{ sheetAnimation }}"
+    onSwipeEnd="onSwipeEnd">
     <slot/>
-  </view>
+  </swipe>
 </view>

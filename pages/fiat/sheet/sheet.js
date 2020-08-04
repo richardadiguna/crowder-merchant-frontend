@@ -18,5 +18,14 @@ Page({
   },
   closeSheet2() {
     this.sheet2Ref.hide()
+  },
+  saveSheetSwipeRef(ref) {
+    this.sheetSwipeRef = ref
+  },
+  openSheetSwipe() {
+    this.sheetSwipeRef.show()
+  },
+  closeSheetSwipe() {
+    this.sheetSwipeRef.hide()
   }
 });

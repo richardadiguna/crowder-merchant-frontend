@@ -11,6 +11,7 @@ Component(FiatComponent({
   props: {
     roundedTop: false,
     dismissable: true,
+    swipe: false,
   },
   onInit() {
     this.animation = my.createAnimation({
@@ -30,10 +31,16 @@ Component(FiatComponent({
   methods: {
     updateSheetClass(props) {
       if (!props) props = this.props
-      const { roundedTop } = props
+      const { roundedTop, swipe } = props
+      const sheetClasses = []
       if (roundedTop) {
-        this.setData({ sheetClass: 'f-sheet--rounded-top' })
+        sheetClasses.push('f-sheet--rounded-top')
       }
+      if (swipe) {
+        sheetClasses.push('f-sheet--swipe')
+      }
+      const sheetClass = sheetClasses.join(' ')
+      this.setData({ sheetClass })
     },
     dismiss() {
       this.props.dismissable && this.hide()
@@ -49,6 +56,11 @@ Component(FiatComponent({
       this.hideTimer = setTimeout(() => {
         this.setData({ visible: false })
       }, 300)
+    },
+    onSwipeEnd (deltaY) {
+      if (deltaY > 60) {
+        this.hide()
+      }
     },
   },
 }));

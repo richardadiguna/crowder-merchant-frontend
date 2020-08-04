@@ -2,7 +2,7 @@
   <f-btn type="primary" class="mb-20" onTap="openSheet">
     Sheet
   </f-btn>
-  <f-sheet ref="saveSheetRef" roundedTop="">
+  <f-sheet ref="saveSheetRef" roundedTop>
     <f-card>
       <view class="dash"/>
       <f-card-content>
@@ -22,7 +22,7 @@
   <f-btn type="primary" class="mb-20" onTap="openSheet2">
     Sheet (Non Disimissable Overlay)
   </f-btn>
-  <f-sheet ref="saveSheet2Ref" roundedTop="">
+  <f-sheet ref="saveSheet2Ref" dismissable={{ false }} roundedTop>
     <f-card>
       <view class="dash"/>
       <f-card-content>
@@ -33,6 +33,26 @@
           Cancel
         </f-btn>
         <f-btn onTap="closeSheet2" type="primary">
+          Ok
+        </f-btn>
+      </f-card-actions>
+    </f-card>
+  </f-sheet>
+
+  <f-btn type="primary" class="mb-20" onTap="openSheetSwipe">
+    Sheet Swipe
+  </f-btn>
+  <f-sheet ref="saveSheetSwipeRef" swipe roundedTop>
+    <f-card>
+      <view class="dash"/>
+      <f-card-content>
+        Sheet Swipe
+      </f-card-content>
+      <f-card-actions>
+        <f-btn onTap="closeSheetSwipe" type="secondary">
+          Cancel
+        </f-btn>
+        <f-btn onTap="closeSheetSwipe" type="primary">
           Ok
         </f-btn>
       </f-card-actions>
