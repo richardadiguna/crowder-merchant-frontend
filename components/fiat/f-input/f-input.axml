@@ -5,7 +5,7 @@
     <label class="f-input__label">{{label}}</label>
     <view class="f-input__container">
       <view class="f-input__wrapper">
-        <view class="f-input__icon-inner-left m-10">
+        <view class="f-input__icon-inner-left">
           <slot name="iconInnerLeft" />
         </view>
         <input

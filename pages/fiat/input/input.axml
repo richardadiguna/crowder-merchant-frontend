@@ -50,5 +50,23 @@
     placeholder="example placeholder" 
     label="text-field-amount"
     inputType="text-field-amount"
+    class="mb-16"
   />
+
+  <f-input 
+    placeholder="example placeholder" 
+    label="text-field-amount with icon inner left"
+    inputType="text-field-amount"
+    class="mb-16"
+  >
+   <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft" />
+  </f-input>
+
+  <f-input 
+    placeholder="example placeholder" 
+    label="text-field-amount with Currency text as icon inner left"
+    inputType="text-field-amount"
+  >
+    <view slot="iconInnerLeft">Rp</view>
+  </f-input>
 </view>
