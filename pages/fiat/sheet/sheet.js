@@ -10,6 +10,15 @@ Page({
   closeSheet() {
     this.sheetRef.hide()
   },
+  saveSheetRoundedRef(ref) {
+    this.sheetRoundedRef = ref
+  },
+  openSheetRounded() {
+    this.sheetRoundedRef.show()
+  },
+  closeSheetRounded() {
+    this.sheetRoundedRef.hide()
+  },
   saveSheet2Ref(ref) {
     this.sheet2Ref = ref
   },

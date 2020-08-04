@@ -2,17 +2,37 @@
   <f-btn type="primary" class="mb-20" onTap="openSheet">
     Sheet
   </f-btn>
-  <f-sheet ref="saveSheetRef" roundedTop>
+  <f-sheet ref="saveSheetRef">
     <f-card>
       <view class="dash"/>
       <f-card-content>
-        Sheet (Disimissable Overlay)
+        Sheet Content
       </f-card-content>
       <f-card-actions>
         <f-btn onTap="closeSheet" type="secondary">
           Cancel
         </f-btn>
         <f-btn onTap="closeSheet" type="primary">
+          Ok
+        </f-btn>
+      </f-card-actions>
+    </f-card>
+  </f-sheet>
+
+  <f-btn type="primary" class="mb-20" onTap="openSheetRounded">
+    Sheet (Rounded)
+  </f-btn>
+  <f-sheet ref="saveSheetRoundedRef" roundedTop>
+    <f-card>
+      <view class="dash"/>
+      <f-card-content>
+        Sheet (Rounded)
+      </f-card-content>
+      <f-card-actions>
+        <f-btn onTap="closeSheetRounded" type="secondary">
+          Cancel
+        </f-btn>
+        <f-btn onTap="closeSheetRounded" type="primary">
           Ok
         </f-btn>
       </f-card-actions>
@@ -47,11 +67,7 @@
       <view class="dash"/>
       <f-card-content>
         <view>Sheet Swipe</view>
-        <view>Sheet Swipe</view>
-        <view>Sheet Swipe</view>
-        <view>Sheet Swipe</view>
-        <view>Sheet Swipe</view>
-        <view>Sheet Swipe</view>
+        <view>Swipe down to dismiss</view>
       </f-card-content>
       <f-card-actions>
         <f-btn onTap="closeSheetSwipe" type="secondary">

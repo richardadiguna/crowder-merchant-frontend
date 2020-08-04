@@ -1,4 +1,4 @@
-<view class="scroll-lock-body" style="display: {{ visible ? 'block' : 'none' }};">
+<view class="f-sheet--container" style="display: {{ visible ? 'flex' : 'none' }};">
   <transition name="f-fade" visible="{{ !leaving }}">
     <f-overlay slot-scope="props"
       class="{{ props.transitionClass }}"

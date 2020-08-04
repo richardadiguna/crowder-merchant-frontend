@@ -4,7 +4,9 @@ Page({
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
   },
   onReady() {
-    // Page loading is complete
+    my.navigateTo({
+      url: '/pages/fiat/sheet/sheet'
+    });
   },
   onShow() {
     // Page display
