@@ -45,7 +45,7 @@ Component({
         this.props.onSwipeVertical(deltaY, event)
       }
 
-      if (deltaY > 10 && deltaY < 75) {
+      if (deltaY > 5 && deltaY < 75) {
         const swipeAnimation = my.createAnimation({
           timeFunction: 'ease',
           duration: 10,

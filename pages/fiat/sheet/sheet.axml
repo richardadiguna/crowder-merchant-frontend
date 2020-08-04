@@ -46,7 +46,12 @@
     <f-card>
       <view class="dash"/>
       <f-card-content>
-        Sheet Swipe
+        <view>Sheet Swipe</view>
+        <view>Sheet Swipe</view>
+        <view>Sheet Swipe</view>
+        <view>Sheet Swipe</view>
+        <view>Sheet Swipe</view>
+        <view>Sheet Swipe</view>
       </f-card-content>
       <f-card-actions>
         <f-btn onTap="closeSheetSwipe" type="secondary">
