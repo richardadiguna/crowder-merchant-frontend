@@ -1,0 +1,11 @@
+<view class="f-sheet--container" style="display: {{ visible ? 'flex' : 'none' }};">
+  <transition name="f-fade" visible="{{ !leaving }}">
+    <f-overlay slot-scope="props"
+      class="{{ props.transitionClass }}"
+      onTap="dismiss"/>
+  </transition>
+  <swipe disabled="{{ !swipe }}" class="f-sheet {{ sheetClass }}" animation="{{ sheetAnimation }}"
+    onSwipeEnd="onSwipeEnd">
+    <slot/>
+  </swipe>
+</view>

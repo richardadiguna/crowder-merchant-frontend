@@ -3,9 +3,7 @@ Page({
     // Page load
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
   },
-  onReady() {
-    // Page loading is complete
-  },
+  onReady() {},
   onShow() {
     // Page display
   },
