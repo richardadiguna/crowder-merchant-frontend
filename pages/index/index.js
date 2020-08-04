@@ -3,11 +3,7 @@ Page({
     // Page load
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
   },
-  onReady() {
-    my.navigateTo({
-      url: '/pages/fiat/sheet/sheet'
-    });
-  },
+  onReady() {},
   onShow() {
     // Page display
   },
