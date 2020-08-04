@@ -1,4 +1,7 @@
 Page({
+  data: {
+    helpDialogVisible: false,
+  },
   onLoad(query) {
     // Page load
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
@@ -30,4 +33,8 @@ Page({
       path: 'pages/index/index',
     };
   },
+
+  openHelpDialog() {
+    this.setData({ helpDialogVisible: true })
+  }
 });

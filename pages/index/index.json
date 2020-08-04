@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "f-btn": "/components/fiat/f-btn/f-btn",
-    "f-input": "/components/fiat/f-input/f-input"
+    "f-input": "/components/fiat/f-input/f-input",
+    "help-button": "/components/help-button/help-button"
   }
 }

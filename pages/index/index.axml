@@ -1,7 +1,10 @@
 <view class="f-body m-16">
   <f-input placeholder="Search your provider" class="mb-16">
-    <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft" />
+    <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>
+
+  <help-button onTap="openHelpDialog"/>
+
   <f-btn type="secondary" size="small">
     <navigator url="/pages/fiat/index/index">go to FIAT components main page</navigator>
   </f-btn>
