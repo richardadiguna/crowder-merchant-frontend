@@ -1,0 +1,9 @@
+.help-button {
+  border: none;
+  height: 28px;
+  width: 28px;
+}
+
+.help-button:active, .help-button:focus {
+  border: none;
+}
