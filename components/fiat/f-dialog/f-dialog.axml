@@ -1,4 +1,7 @@
-<view class="f-dialog" style="display: {{ internalProps.visible ? 'block' : 'none' }};">
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-dialog', className) }}"
+  style="display: {{ internalProps.visible ? 'block' : 'none' }};">
   <transition name="f-fade" visible="{{ !leaving }}">
     <f-overlay slot-scope="props"
       class="{{ props.transitionClass }}"
@@ -8,7 +11,7 @@
   <transition name="f-alert-dialog" visible="{{ !leaving }}">
     <view slot-scope="props"
       class="f-dialog__container f-dialog__container--{{ type }} {{ props.transitionClass }}">
-      <view class="f-dialog__container__inner">
+      <view class="f-dialog__container__inner {{ containerClass }}">
         <slot/>
       </view>
     </view>

@@ -1,0 +1,7 @@
+.help-dialog-container {
+  background-color: white;
+  border-radius: 8px;
+  margin-left: 34px;
+  margin-right: 34px;
+  padding: 12px;
+}

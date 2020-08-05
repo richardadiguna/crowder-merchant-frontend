@@ -19,7 +19,6 @@
     </f-card>
   </f-dialog>
 
-
   <f-btn onTap="showDialog3" type="primary">
     Dialog-3 using with data binding
   </f-btn>
