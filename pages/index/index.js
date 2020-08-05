@@ -43,5 +43,8 @@ Page({
   },
   openHelpDialog() {
     this.helpDialogRef.show()
-  }
+  },
+  closeHelpDialog() {
+    this.helpDialogRef.hide()
+  },
 });

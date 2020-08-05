@@ -11,7 +11,7 @@
       <image src="https://a.m.dana.id/marmot/s/2019/3/20/5e451c0a-c451-430e-b001-c09a36a2999c.jpg"/>
     </help-dialog-content>
     <help-dialog-action>
-      <f-btn size="small">I UNDERSTAND</f-btn>
+      <f-btn size="small" onTap="closeHelpDialog">I UNDERSTAND</f-btn>
     </help-dialog-action>
   </help-dialog>
 

@@ -6,5 +6,8 @@ Component({
     show() {
       this.dialogRef.show()
     },
+    hide() {
+      this.dialogRef.hide()
+    },
   },
 });
