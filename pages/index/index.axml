@@ -7,7 +7,7 @@
   <help-dialog ref="saveHelpDialogRef">
     <help-dialog-title>How to get your customer number info modal</help-dialog-title>
     <help-dialog-content>
-      <view>{{ helpDialogMessage }}</view>
+      <view class="mb-16">{{ helpDialogMessage }}</view>
       <image src="https://a.m.dana.id/marmot/s/2019/3/20/5e451c0a-c451-430e-b001-c09a36a2999c.jpg"/>
     </help-dialog-content>
     <help-dialog-action>
