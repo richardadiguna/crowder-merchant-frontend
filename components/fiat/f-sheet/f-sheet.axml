@@ -1,6 +1,6 @@
 <import-sjs name="element" from="../../../utils/element.sjs"/>
 
-<view class="{{ element('f-sheet--container', className) }}"
+<view class="{{ element.classAttr('f-sheet--container', className) }}"
   style="display: {{ visible ? 'flex' : 'none' }};">
   <transition name="f-fade" visible="{{ !leaving }}">
     <f-overlay slot-scope="props"

@@ -17,7 +17,7 @@
 
   <f-toast ref="saveToastRef"/>
   <error-sheet ref="saveErrorSheetRef">
-    <error-sheet-icon/>
+    <error-sheet-image src="https://a.m.dana.id/resource/imgs/insurance/somethings-wrong.svg"/>
     <error-sheet-content/>
     <error-sheet-action>
       <f-btn size="small">GOT IT</f-btn>

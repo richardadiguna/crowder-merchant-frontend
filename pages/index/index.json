@@ -5,7 +5,7 @@
     "f-toast": "/components/fiat/f-toast/f-toast",
 
     "error-sheet": "/components/error-sheet/error-sheet",
-    "error-sheet-icon": "/components/error-sheet/error-sheet-icon/error-sheet-icon",
+    "error-sheet-image": "/components/error-sheet/error-sheet-image/error-sheet-image",
     "error-sheet-content": "/components/error-sheet/error-sheet-content/error-sheet-content",
     "error-sheet-action": "/components/error-sheet/error-sheet-action/error-sheet-action",
 
