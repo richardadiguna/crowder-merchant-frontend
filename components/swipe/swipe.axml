@@ -2,8 +2,8 @@
 
 <view class="{{ className }}"
   animation="{{ swipeAnimation ? swipeAnimation : derivedAnimation }}"
-  onTouchStart="onTouchStart"
+  catchTouchStart="onTouchStart"
   catchTouchMove="onTouchMove"
-  onTouchEnd="onTouchEnd">
+  catchTouchEnd="onTouchEnd">
   <slot/>
 </view>

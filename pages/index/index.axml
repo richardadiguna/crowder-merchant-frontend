@@ -15,6 +15,33 @@
     </help-dialog-action>
   </help-dialog>
 
+  <f-toast ref="saveToastRef"/>
+  <error-sheet ref="saveGeneralErrorSheetRef">
+    <error-sheet-image src="https://a.m.dana.id/resource/imgs/insurance/somethings-wrong.svg"/>
+    <error-sheet-title>Uh-oh, something’s wrong</error-sheet-title>
+    <error-sheet-content>{{ generalErrorMessage }}</error-sheet-content>
+    <error-sheet-action>
+      <f-btn onTap="hideGeneralError">GOT IT</f-btn>
+    </error-sheet-action>
+  </error-sheet>
+  <error-sheet ref="saveCutOffTimeErrorSheetRef">
+    <error-sheet-image src="https://a.m.dana.id/resource/imgs/insurance/fail-transaction.svg"/>
+    <error-sheet-title>Ah, you came at the wrong time</error-sheet-title>
+    <error-sheet-content>{{ cutOffTimeErrorMessage }}</error-sheet-content>
+    <error-sheet-action>
+      <f-btn onTap="hideCutOffTimeError">GOT IT</f-btn>
+    </error-sheet-action>
+  </error-sheet>
+  <f-btn class="mt-16 mb-16" type="secondary" size="small" onTap="showGeneralError">
+    Error - General Error
+  </f-btn>
+  <f-btn class="mb-16" type="secondary" size="small" onTap="showCutOffTimeError">
+    Error - Cut Off Time
+  </f-btn>
+  <f-btn class="mb-16" type="secondary" size="small" onTap="showConnectionUnstableError">
+    Error - Connection Unstable
+  </f-btn>
+
   <f-btn type="secondary" size="small">
     <navigator url="/pages/fiat/index/index">go to FIAT components main page</navigator>
   </f-btn>

@@ -5,6 +5,12 @@ Page({
       Sebutkan nama dan nomor telepon yang terdaftar sebelumnya.
       Petugas kantor pembiayaan akan memberitahukan nomor kontrak anda.
     `,
+    generalErrorMessage: `
+      We can’t process your customer number right now. Give it a try later, perhaps? 
+    `,
+    cutOffTimeErrorMessage: `
+      Your transaction cannot be processed right now. Please try again after 01.00 AM.
+    `,
   },
   onLoad(query) {
     // Page load
@@ -23,9 +29,7 @@ Page({
   onTitleClick() {
     // Title clicked
   },
-  onPullDownRefresh() {
-    // Page is pulled down
-  },
+  onPullDownRefresh() {},
   onReachBottom() {
     // Page is pulled to the bottom
   },
@@ -46,5 +50,35 @@ Page({
   },
   closeHelpDialog() {
     this.helpDialogRef.hide()
+  },
+
+  saveToastRef(ref) {
+    this.toastRef = ref
+  },
+  showConnectionUnstableError() {
+    this.toastRef.warning('The network connection is unstable. Please try again later.', {
+      snackbar: true,
+      actionText: 'OKAY',
+    })
+  },
+
+  saveGeneralErrorSheetRef(ref) {
+    this.generalErrorSheetRef = ref
+  },
+  showGeneralError() {
+    this.generalErrorSheetRef.show()
+  },
+  hideGeneralError() {
+    this.generalErrorSheetRef.hide()
+  },
+
+  saveCutOffTimeErrorSheetRef(ref) {
+    this.cutOffTimeErrorSheetRef = ref
+  },
+  showCutOffTimeError() {
+    this.cutOffTimeErrorSheetRef.show()
+  },
+  hideCutOffTimeError() {
+    this.cutOffTimeErrorSheetRef.hide()
   },
 });
