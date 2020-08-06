@@ -5,6 +5,9 @@ Page({
       Sebutkan nama dan nomor telepon yang terdaftar sebelumnya.
       Petugas kantor pembiayaan akan memberitahukan nomor kontrak anda.
     `,
+    generalErrorMessage: `
+      We can’t process your customer number right now. Give it a try later, perhaps? 
+    `
   },
   onLoad(query) {
     // Page load
