@@ -47,4 +47,14 @@ Page({
   closeHelpDialog() {
     this.helpDialogRef.hide()
   },
+
+  saveToastRef(ref) {
+    this.toastRef = ref
+  },
+  showConnectionUnstableToast() {
+    this.toastRef.warning('The network connection is unstable. Please try again later.', {
+      snackbar: true,
+      actionText: 'OKAY',
+    })
+  },
 });

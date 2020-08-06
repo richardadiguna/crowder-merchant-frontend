@@ -2,6 +2,7 @@
   "usingComponents": {
     "f-btn": "/components/fiat/f-btn/f-btn",
     "f-input": "/components/fiat/f-input/f-input",
+    "f-toast": "/components/fiat/f-toast/f-toast",
 
     "help-button": "/components/help-button/help-button",
     "help-dialog": "/components/help-dialog/help-dialog",

@@ -15,6 +15,17 @@
     </help-dialog-action>
   </help-dialog>
 
+  <f-toast ref="saveToastRef"/>
+  <f-btn class="mt-16 mb-16" type="secondary" size="small">
+    Error - General Error
+  </f-btn>
+  <f-btn class="mb-16" type="secondary" size="small">
+    Error - Cut Off Time
+  </f-btn>
+  <f-btn class="mb-16" type="secondary" size="small" onTap="showConnectionUnstableToast">
+    Error - Connection Unstable
+  </f-btn>
+
   <f-btn type="secondary" size="small">
     <navigator url="/pages/fiat/index/index">go to FIAT components main page</navigator>
   </f-btn>
