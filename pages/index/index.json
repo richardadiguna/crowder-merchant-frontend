@@ -4,6 +4,11 @@
     "f-input": "/components/fiat/f-input/f-input",
     "f-toast": "/components/fiat/f-toast/f-toast",
 
+    "error-sheet": "/components/error-sheet/error-sheet",
+    "error-sheet-icon": "/components/error-sheet/error-sheet-icon/error-sheet-icon",
+    "error-sheet-content": "/components/error-sheet/error-sheet-content/error-sheet-content",
+    "error-sheet-action": "/components/error-sheet/error-sheet-action/error-sheet-action",
+
     "help-button": "/components/help-button/help-button",
     "help-dialog": "/components/help-dialog/help-dialog",
     "help-dialog-title": "/components/help-dialog/help-dialog-title/help-dialog-title",

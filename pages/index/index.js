@@ -51,10 +51,17 @@ Page({
   saveToastRef(ref) {
     this.toastRef = ref
   },
-  showConnectionUnstableToast() {
+  showConnectionUnstableError() {
     this.toastRef.warning('The network connection is unstable. Please try again later.', {
       snackbar: true,
       actionText: 'OKAY',
     })
+  },
+
+  saveErrorSheetRef(ref) {
+    this.errorSheetRef = ref
+  },
+  showGeneralError() {
+    this.errorSheetRef.show()
   },
 });

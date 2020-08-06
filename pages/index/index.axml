@@ -16,13 +16,20 @@
   </help-dialog>
 
   <f-toast ref="saveToastRef"/>
-  <f-btn class="mt-16 mb-16" type="secondary" size="small">
+  <error-sheet ref="saveErrorSheetRef">
+    <error-sheet-icon/>
+    <error-sheet-content/>
+    <error-sheet-action>
+      <f-btn size="small">GOT IT</f-btn>
+    </error-sheet-action>
+  </error-sheet>
+  <f-btn class="mt-16 mb-16" type="secondary" size="small" onTap="showGeneralError">
     Error - General Error
   </f-btn>
   <f-btn class="mb-16" type="secondary" size="small">
     Error - Cut Off Time
   </f-btn>
-  <f-btn class="mb-16" type="secondary" size="small" onTap="showConnectionUnstableToast">
+  <f-btn class="mb-16" type="secondary" size="small" onTap="showConnectionUnstableError">
     Error - Connection Unstable
   </f-btn>
 

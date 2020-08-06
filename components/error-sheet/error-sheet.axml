@@ -1,0 +1,3 @@
+<f-sheet ref="saveSheetRef" class="error-sheet" swipe roundedTop>
+  <slot/>
+</f-sheet>
