@@ -26,9 +26,7 @@ Page({
   onTitleClick() {
     // Title clicked
   },
-  onPullDownRefresh() {
-    // Page is pulled down
-  },
+  onPullDownRefresh() {},
   onReachBottom() {
     // Page is pulled to the bottom
   },
@@ -66,5 +64,8 @@ Page({
   },
   showGeneralError() {
     this.errorSheetRef.show()
+  },
+  hideGeneralError() {
+    this.errorSheetRef.hide()
   },
 });

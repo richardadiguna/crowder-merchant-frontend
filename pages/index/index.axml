@@ -21,7 +21,7 @@
     <error-sheet-title>Uh-oh, something’s wrong</error-sheet-title>
     <error-sheet-content>{{ generalErrorMessage }}</error-sheet-content>
     <error-sheet-action>
-      <f-btn size="small">GOT IT</f-btn>
+      <f-btn onTap="hideGeneralError">GOT IT</f-btn>
     </error-sheet-action>
   </error-sheet>
   <f-btn class="mt-16 mb-16" type="secondary" size="small" onTap="showGeneralError">

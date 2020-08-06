@@ -12,5 +12,8 @@ Component({
     show() {
       this.sheetRef.show()
     },
+    hide() {
+      this.sheetRef.hide()
+    }
   },
 });
