@@ -18,7 +18,6 @@ Component({
       if (this.props) props = this.props
       const { denoms=[] } = props
       const denomRows = chunk(denoms, 2)
-      console.log(denomRows)
       this.setData({ denomRows })
     },
   },
