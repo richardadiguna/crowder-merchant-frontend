@@ -6,6 +6,7 @@ Component({
   },
   props: {
     denoms: [],
+    short: true,
   },
   didMount() {
     this.updateDenomRows()

@@ -8,9 +8,9 @@
       a:for="{{ denomRow }}"
       a:for-item="denomColumn">
       <view class="desc title-24">
-        {{ denom.major(denomColumn.denom.amount) }}
+        {{ denom.major(denomColumn.denom.amount, short) }}
         <text class="minor title-12 ml-2">
-          {{ denom.minor(denomColumn.denom.amount) }}
+          {{ denom.minor(denomColumn.denom.amount, short) }}
         </text>
       </view>
       <view class="price">
