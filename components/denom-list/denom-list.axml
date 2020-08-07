@@ -13,6 +13,9 @@
           {{ denom.minor(denomColumn.denom.amount) }}
         </text>
       </view>
+      <view class="price">
+        {{ denomColumn.price.currency }}{{ denomColumn.price.amount }}
+      </view>
     </view> 
   </view>
 </view>
