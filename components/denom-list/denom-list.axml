@@ -1,0 +1,11 @@
+<view class="denom-list">
+  <view class="denom-row {{ denomRow.length == 1 ? ' single' : '' }}"
+    a:for="{{ denomRows }}"
+    a:for-item="denomRow">
+    <view class="denom-card"
+      a:for="{{ denomRow }}"
+      a:for-item="denom">
+      
+    </view> 
+  </view>
+</view>

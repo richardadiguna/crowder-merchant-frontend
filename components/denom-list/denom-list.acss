@@ -1,0 +1,28 @@
+.denom-list {
+  width: 100%;
+}
+
+.denom-row {
+  display: flex;
+  width: 100%;
+}
+
+.denom-row .denom-card {
+  flex: 1;
+  min-height: 100px;
+  border: solid 1px #e3e3e3; /* grey-20 */
+  margin-right: 16px;
+  margin-bottom: 8px;
+}
+
+.denom-row .denom-card:nth-child(2) {
+  margin-right: 0px;
+}
+
+.denom-row.single {
+  width: 50%;
+}
+
+.denom-row.single .denom-card {
+  margin-right: 8px;
+}
