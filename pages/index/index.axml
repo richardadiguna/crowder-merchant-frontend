@@ -3,7 +3,9 @@
     <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>
 
-  <help-button onTap="openHelpDialog"/>
+  <view class="mb-24">
+    <help-button onTap="openHelpDialog"/>
+  </view>
   <help-dialog ref="saveHelpDialogRef">
     <help-dialog-title>How to get your customer number info modal</help-dialog-title>
     <help-dialog-content>
@@ -14,6 +16,8 @@
       <f-btn size="small" onTap="closeHelpDialog">I UNDERSTAND</f-btn>
     </help-dialog-action>
   </help-dialog>
+
+  <denom-list denoms="{{ denoms }}"/>
 
   <f-toast ref="saveToastRef"/>
   <error-sheet ref="saveGeneralErrorSheetRef">

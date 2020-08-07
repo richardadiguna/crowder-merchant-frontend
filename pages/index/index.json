@@ -4,6 +4,8 @@
     "f-input": "/components/fiat/f-input/f-input",
     "f-toast": "/components/fiat/f-toast/f-toast",
 
+    "denom-list": "/components/denom-list/denom-list",
+
     "error-sheet": "/components/error-sheet/error-sheet",
     "error-sheet-image": "/components/error-sheet/error-sheet-image/error-sheet-image",
     "error-sheet-title": "/components/error-sheet/error-sheet-title/error-sheet-title", 
