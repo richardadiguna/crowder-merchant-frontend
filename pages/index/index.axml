@@ -1,4 +1,5 @@
 <view class="f-body m-16">
+  <text>{{ JSON.stringify(denoms) }}</text>
   <f-input placeholder="Search your provider" class="mb-16">
     <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>

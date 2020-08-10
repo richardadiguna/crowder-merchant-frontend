@@ -11,12 +11,12 @@ Component({
   didMount() {
     this.updateDenomRows()
   },
-  derivedDataFromProps(nextProps) {
+  deriveDataFromProps(nextProps) {
     this.updateDenomRows(nextProps)
   },
   methods: {
     updateDenomRows(props) {
-      if (this.props) props = this.props
+      if (!props) props = this.props
       const { denoms=[] } = props
       const denomRows = chunk(denoms, 2)
       this.setData({ denomRows })
