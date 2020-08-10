@@ -3,6 +3,8 @@
     <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>
 
+  <provider-list />
+
   <view class="mb-24">
     <help-button onTap="openHelpDialog"/>
   </view>
