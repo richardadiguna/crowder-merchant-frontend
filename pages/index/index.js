@@ -42,13 +42,42 @@ Page({
       },
      ],
      providers: [
-       'A Provider Name',
-       'A1 Provider Name',
-       'B Provider Name',
-       'B1 Provider Name',
-       'B2 Provider Name',
-       'C Provider Name',
-       'C1 Provider Name',
+      {
+        section: 'A',
+        name: 'Provider Name'
+      },
+      {
+        section: 'A',
+        name: 'Provider Name'
+      },
+      {
+        section: 'A',
+        name: 'Provider Name'
+      },
+      {
+        section: 'B',
+        name: 'Provider Name'
+      },
+      {
+        section: 'B',
+        name: 'Provider Name'
+      },
+      {
+        section: 'C',
+        name: 'Provider Name'
+      },
+      {
+        section: 'C',
+        name: 'Provider Name'
+      },
+      {
+        section: 'C',
+        name: 'Provider Name'
+      },
+      {
+        section: 'D',
+        name: 'Provider Name'
+      }
      ]
   },
   onLoad(query) {
