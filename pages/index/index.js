@@ -44,6 +44,44 @@ Page({
     `,
     denoms: [],
     customerNumberLoading: false,
+    providers: [
+      {
+        section: 'A',
+        name: 'Provider Name'
+      },
+      {
+        section: 'A',
+        name: 'Provider Name'
+      },
+      {
+        section: 'A',
+        name: 'Provider Name'
+      },
+      {
+        section: 'B',
+        name: 'Provider Name'
+      },
+      {
+        section: 'B',
+        name: 'Provider Name'
+      },
+      {
+        section: 'C',
+        name: 'Provider Name'
+      },
+      {
+        section: 'C',
+        name: 'Provider Name'
+      },
+      {
+        section: 'C',
+        name: 'Provider Name'
+      },
+      {
+        section: 'D',
+        name: 'Provider Name'
+      }
+     ]
   },
   onLoad(query) {
     // Page load

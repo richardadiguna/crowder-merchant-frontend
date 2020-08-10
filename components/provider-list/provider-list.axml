@@ -1,0 +1,23 @@
+<view a:for="{{providers}}">
+  <f-divider 
+    a:if={{ index === 0 || item.section !== providers[index - 1].section }}
+    class="py-4 px-16" 
+    title="{{item.section}}" 
+    type="title" 
+  />
+  <f-divider/>
+  <f-cell class="pl-16 pr-4 py-12">
+    <f-cell-icon w="30" h="30" class="mr-12">
+      <f-icon name="dana-coin"/>
+    </f-cell-icon>
+    <f-cell-content>
+      <f-cell-label>
+        {{item.name}}
+      </f-cell-label>
+    </f-cell-content>
+    <f-cell-action class="f-flex flex-center" onTap="onTap">
+      <view class="arrow"/>
+    </f-cell-action>
+  </f-cell>
+  <f-divider/>
+</view>

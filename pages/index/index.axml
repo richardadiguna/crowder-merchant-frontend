@@ -1,11 +1,14 @@
-<view class="f-body m-16">
-  <f-input placeholder="Search your provider" class="mb-16">
+<view class="f-body">
+  <f-input placeholder="Search your provider" class="p-16">
     <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>
+
+  <provider-list providers="{{ providers }}" />
 
   <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}">
     <help-button slot="iconOutterRight" onTap="openHelpDialog"/>
   </customer-number-input>
+
   <help-dialog ref="saveHelpDialogRef">
     <help-dialog-title>How to get your customer number info modal</help-dialog-title>
     <help-dialog-content>
