@@ -1,3 +1,10 @@
 <f-input class="customer-number-input mr-8"
   onInput="onInput"
-  showLoader="{{ loading }}"/>
+  type="{{ type }}"
+  maxlength="{{ maxlength }}"
+  placeholder="{{ placeholder }}",
+  showLoader="{{ showLoader }}",
+  helperMsg="{{ helperMsg }}",
+  errorMsg="{{ errorMsg }}",
+  inputType="{{ inputType }}"
+/>

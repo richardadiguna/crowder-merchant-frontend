@@ -5,7 +5,13 @@ Component(FiatComponent({
   mixins: [],
   data: {},
   props: {
-    loading: false,
+    type: 'text', // text || number || digit
+    maxlength: 140,
+    placeholder: '',
+    showLoader: false,
+    helperMsg: '',
+    errorMsg: '',
+    inputType: 'text-box' // 'text-box' || 'text-field' (not supported yet) || 'text-field-amount'
   },
   didMount() {},
   didUpdate() {},

@@ -5,7 +5,7 @@
   </f-input>
 
   <view class="mb-24 customer-number-container">
-    <customer-number-input onInput="onCustomerNumberInput" loading="{{ customerNumberLoading }}"/>
+    <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}"/>
     <help-button onTap="openHelpDialog"/>
   </view>
   <help-dialog ref="saveHelpDialogRef">
