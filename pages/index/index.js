@@ -41,6 +41,15 @@ Page({
         price: { amount: '5.001.500', currency: 'Rp' },
       },
      ],
+     providers: [
+       'A Provider Name',
+       'A1 Provider Name',
+       'B Provider Name',
+       'B1 Provider Name',
+       'B2 Provider Name',
+       'C Provider Name',
+       'C1 Provider Name',
+     ]
   },
   onLoad(query) {
     // Page load

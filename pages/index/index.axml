@@ -1,9 +1,9 @@
-<view class="f-body m-16">
-  <f-input placeholder="Search your provider" class="mb-16">
+<view class="f-body">
+  <f-input placeholder="Search your provider" class="p-16">
     <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>
 
-  <provider-list />
+  <provider-list providers="{{ providers }}" />
 
   <view class="mb-24">
     <help-button onTap="openHelpDialog"/>

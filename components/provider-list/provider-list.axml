@@ -1,3 +1,18 @@
-<view>
-  Provider list
+<f-divider class="py-4 px-16" title="A" type="title" />
+<f-divider/>
+<view a:for="{{providers}}" a:for-item="provider" >
+  <f-cell class="pl-16 pr-4 py-12">
+    <f-cell-icon w="30" h="30" class="mr-12">
+      <f-icon name="dana-coin"/>
+    </f-cell-icon>
+    <f-cell-content>
+      <f-cell-label>
+        {{provider}}
+      </f-cell-label>
+    </f-cell-content>
+    <f-cell-action class="f-flex flex-center" onTap="onTap">
+      <view class="arrow"/>
+    </f-cell-action>
+  </f-cell>
+  <f-divider/>
 </view>
