@@ -47,7 +47,7 @@ Page({
     providers: [
       {
         section: 'A',
-        name: 'Provider Name'
+        name: 'Provider Name A'
       },
       {
         section: 'A',
@@ -67,7 +67,7 @@ Page({
       },
       {
         section: 'C',
-        name: 'Provider Name'
+        name: 'Provider Name C'
       },
       {
         section: 'C',
@@ -81,11 +81,13 @@ Page({
         section: 'D',
         name: 'Provider Name'
       }
-     ]
+    ],
+    providersSearchResult: []
   },
   onLoad(query) {
     // Page load
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+    this.setData({ providersSearchResult: this.data.providers })
   },
   onReady() {},
   onShow() {
@@ -166,4 +168,21 @@ Page({
       }
     }, 500)
   },
+
+  onSearchInput(e)  {
+    const searchKey = e.detail.value || ''
+    const lowerCaseSearchKey = searchKey.toLowerCase()
+    const filtered = this.data.providers.filter(provider => {
+      const lowerCaseProviderName = provider.name.toLowerCase()
+      if (lowerCaseProviderName.indexOf(lowerCaseSearchKey) !== -1) {
+        return provider
+      }
+    })
+    if (searchKey) {
+      this.setData({ providersSearchResult: filtered })
+    } else {
+      this.setData({ providersSearchResult: this.data.providers })
+    }
+    // todo: refactor for search result UI (empty or not empty) on other jira story
+  }
 });
