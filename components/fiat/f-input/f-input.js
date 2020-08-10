@@ -58,7 +58,8 @@ Component(FiatComponent({
     onClearIconTap () {
       this.setData({
         inputValue: '',
-      })
+        showClearIcon: false,
+     })
     },
     setIconInnerLeftStyle () {
       const { inputCssClass } = this.data
