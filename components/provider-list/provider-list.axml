@@ -15,7 +15,7 @@
         {{item.name}}
       </f-cell-label>
     </f-cell-content>
-    <f-cell-action class="f-flex flex-center" onTap="onTap">
+    <f-cell-action class="f-flex flex-center">
       <view class="arrow"/>
     </f-cell-action>
   </f-cell>
