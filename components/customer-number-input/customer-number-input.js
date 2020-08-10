@@ -4,7 +4,9 @@ Component(FiatComponent({
   exposeInputHandler: true,
   mixins: [],
   data: {},
-  props: {},
+  props: {
+    loading: false,
+  },
   didMount() {},
   didUpdate() {},
   didUnmount() {},

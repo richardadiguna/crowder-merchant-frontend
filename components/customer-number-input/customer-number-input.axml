@@ -1,1 +1,3 @@
-<f-input class="customer-number-input mr-8" onInput="onInput"/>
+<f-input class="customer-number-input mr-8"
+  onInput="onInput"
+  showLoader="{{ loading }}"/>

@@ -43,6 +43,7 @@ Page({
       Your transaction cannot be processed right now. Please try again after 01.00 AM.
     `,
     denoms: [],
+    customerNumberLoading: false,
   },
   onLoad(query) {
     // Page load
@@ -118,11 +119,12 @@ Page({
     const { value } = e.detail
 
     clearTimeout(this.customerNumberTimer)
+    this.setData({ customerNumberLoading: true })
     this.customerNumberTimer = setTimeout(() => {
       if (value) {
-        this.setData({ denoms })
+        this.setData({ denoms, customerNumberLoading: false })
       } else {
-        this.setData({ denoms: [] })
+        this.setData({ denoms: [], customerNumberLoading: false })
       }
     }, 500)
   },
