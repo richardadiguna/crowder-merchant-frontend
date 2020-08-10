@@ -124,6 +124,6 @@ Page({
       } else {
         this.setData({ denoms: [] })
       }
-    }, 1000)
+    }, 500)
   },
 });
