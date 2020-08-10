@@ -1,10 +1,8 @@
 import validatePropsMixin from './mixins/validate-props'
 import internalPropsMixin from './mixins/internal-props'
 
-
-
 const FiatComponent = (component) => {
-  const { internalProps } = component
+  const { internalProps, exposeInputHandler = false } = component
 
   const data = {}
 
@@ -27,6 +25,24 @@ const FiatComponent = (component) => {
     for (let i=0; i<keys.length; i++) {
       const key = keys[i]
       props[key] = null
+    }
+  }
+
+  if (exposeInputHandler) {
+    if (!component.props.onInput) props.onInput = null
+    if (!component.props.onInputBlur) props.onInputBlur = null
+    if (!component.props.onInputFocus) props.onInputFocus = null
+    if (!component.methods.onInput) methods.onInput = function(e) { 
+      const { onInput } = this.props
+      if (onInput) onInput(e)
+    }
+    if (!component.methods.onInputBlur) methods.onInputBlur = function(e) { 
+      const { onInputBlur } = this.props
+      if (onInputBlur) onInputBlur(e)
+    }
+    if (!component.methods.onInputFocus) methods.onInputFocus = function(e) { 
+      const { onInputFocus } = this.props
+      if (onInputFocus) onInputFocus(e)
     }
   }
 

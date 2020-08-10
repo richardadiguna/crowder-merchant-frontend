@@ -5,9 +5,10 @@
 
   <provider-list providers="{{ providers }}" />
 
-  <view class="mb-24">
-    <help-button onTap="openHelpDialog"/>
-  </view>
+  <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}">
+    <help-button slot="iconOutterRight" onTap="openHelpDialog"/>
+  </customer-number-input>
+
   <help-dialog ref="saveHelpDialogRef">
     <help-dialog-title>How to get your customer number info modal</help-dialog-title>
     <help-dialog-content>

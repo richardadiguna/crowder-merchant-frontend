@@ -3,6 +3,7 @@ import addClass from '/utils/addClass'
 import removeClass from '/utils/removeClass'
 
 Component(FiatComponent({
+  exportInputHandler: true,
   mixins: [],
   data: {
     inputValue: '',
@@ -24,28 +25,19 @@ Component(FiatComponent({
     this.setIconInnerLeftStyle()
     this.setErrorStyle()
   },
+  deriveDataFromProps(nextProps) {
+    this.updateClearIcon(nextProps)
+  },
   didUpdate() {
     this.setErrorStyle()
   },
   didUnmount() {},
   methods: {
-    onInputFocus () {
-      const { inputTypeClass } = this.data
-      this.setData({
-        inputTypeClass: addClass(inputTypeClass, 'f-input--focus')
-      });
-    },
-    onInputBlur () {
-      const { inputTypeClass } = this.data
-      this.setData({
-        inputTypeClass: removeClass(inputTypeClass, 'f-input--focus')
-      });
-    },
-    onInput (e) {
-      this.setData({
-        inputValue: e.detail.value
-      })
-      if (e.detail.value && !this.props.showLoader) {
+    updateClearIcon(props) {
+      if (!props) props = this.props
+      const { showLoader } = props
+      const { inputValue } = this.data
+      if (inputValue && !showLoader) {
         this.setData({
           showClearIcon: true
         })
@@ -55,10 +47,47 @@ Component(FiatComponent({
         })
       }
     },
-    onClearIconTap () {
+    onInputFocus (e) {
+      const { inputTypeClass } = this.data
+      const { onInputFocus } = this.props
+      if (onInputFocus) onInputFocus(e)
+      this.setData({
+        inputTypeClass: addClass(inputTypeClass, 'f-input--focus')
+      });
+    },
+    onInputBlur (e) {
+      const { onInputBlur } = this.props
+      const { inputTypeClass } = this.data
+      if (onInputBlur) onInputBlur(e)
+      this.setData({
+        inputTypeClass: removeClass(inputTypeClass, 'f-input--focus')
+      });
+    },
+    onInput (e) {
+      const { onInput } = this.props
+      const { value: inputValue } = e.detail
+
+      this.setData({
+        inputValue,
+      }, () => {
+        this.updateClearIcon()
+      })
+
+      if (onInput) onInput(e)
+    },
+    onClearIconTap (e) {
+      const { onInput } = this.props
       this.setData({
         inputValue: '',
+        showClearIcon: false,
+      }, () => {
+        this.updateClearIcon()
       })
+      if (onInput) {
+        const detail = e.detail ? e.detail : {}
+        detail.value = ''
+        onInput({ ...e, detail })
+      }
     },
     setIconInnerLeftStyle () {
       const { inputCssClass } = this.data
