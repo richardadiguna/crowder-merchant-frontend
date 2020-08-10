@@ -45,9 +45,7 @@ Page({
     denoms: [],
     customerNumberLoading: false,
     providers: [
-
       {
-
         section: 'A',
         name: 'Provider Name'
       },
