@@ -3,7 +3,8 @@
     <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>
 
-  <view class="mb-24">
+  <view class="mb-24 customer-number-container">
+    <customer-number-input/>
     <help-button onTap="openHelpDialog"/>
   </view>
   <help-dialog ref="saveHelpDialogRef">

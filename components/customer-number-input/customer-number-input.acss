@@ -1,0 +1,4 @@
+.customer-number-container {
+  display: flex;
+  align-items: center;
+}
