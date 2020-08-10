@@ -25,11 +25,28 @@ Component(FiatComponent({
     this.setIconInnerLeftStyle()
     this.setErrorStyle()
   },
+  deriveDataFromProps(nextProps) {
+    this.updateClearIcon(nextProps)
+  },
   didUpdate() {
     this.setErrorStyle()
   },
   didUnmount() {},
   methods: {
+    updateClearIcon(props) {
+      if (!props) props = this.props
+      const { showLoader } = props
+      const { inputValue } = this.data
+      if (inputValue && !showLoader) {
+        this.setData({
+          showClearIcon: true
+        })
+      } else {
+        this.setData({
+          showClearIcon: false
+        })
+      }
+    },
     onInputFocus (e) {
       const { inputTypeClass } = this.data
       const { onInputFocus } = this.props
@@ -52,25 +69,19 @@ Component(FiatComponent({
 
       this.setData({
         inputValue,
+      }, () => {
+        this.updateClearIcon()
       })
 
       if (onInput) onInput(e)
-      
-      if (e.detail.value && !this.props.showLoader) {
-        this.setData({
-          showClearIcon: true
-        })
-      } else {
-        this.setData({
-          showClearIcon: false
-        })
-      }
     },
     onClearIconTap (e) {
       const { onInput } = this.props
       this.setData({
         inputValue: '',
         showClearIcon: false,
+      }, () => {
+        this.updateClearIcon()
       })
       if (onInput) {
         const detail = e.detail ? e.detail : {}
