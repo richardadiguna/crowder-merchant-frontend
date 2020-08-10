@@ -4,10 +4,9 @@
     <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>
 
-  <view class="mb-24 customer-number-container">
-    <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}"/>
-    <help-button onTap="openHelpDialog"/>
-  </view>
+  <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}">
+    <help-button slot="iconOutterRight" onTap="openHelpDialog"/>
+  </customer-number-input>
   <help-dialog ref="saveHelpDialogRef">
     <help-dialog-title>How to get your customer number info modal</help-dialog-title>
     <help-dialog-content>

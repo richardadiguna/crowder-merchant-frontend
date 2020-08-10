@@ -1,4 +1,4 @@
-<f-input class="customer-number-input mr-8"
+<f-input class="customer-number-input mb-10"
   onInput="onInput"
   type="{{ type }}"
   maxlength="{{ maxlength }}"
@@ -6,5 +6,6 @@
   showLoader="{{ showLoader }}",
   helperMsg="{{ helperMsg }}",
   errorMsg="{{ errorMsg }}",
-  inputType="{{ inputType }}"
-/>
+  inputType="{{ inputType }}">
+  <slot slot="iconOutterRight" name="iconOutterRight"/>
+</f-input>
