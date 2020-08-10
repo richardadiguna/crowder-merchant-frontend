@@ -1,4 +1,7 @@
-Component({
+import FiatComponent from "../fiat/core/fiat-component";
+
+Component(FiatComponent({
+  exposeInputHandler: true,
   mixins: [],
   data: {},
   props: {},
@@ -6,4 +9,4 @@ Component({
   didUpdate() {},
   didUnmount() {},
   methods: {},
-});
+}));

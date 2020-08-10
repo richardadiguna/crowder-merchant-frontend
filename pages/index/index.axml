@@ -4,7 +4,7 @@
   </f-input>
 
   <view class="mb-24 customer-number-container">
-    <customer-number-input/>
+    <customer-number-input onInput="onCustomerNumberInput"/>
     <help-button onTap="openHelpDialog"/>
   </view>
   <help-dialog ref="saveHelpDialogRef">

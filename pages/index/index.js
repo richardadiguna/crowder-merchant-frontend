@@ -111,4 +111,8 @@ Page({
   hideCutOffTimeError() {
     this.cutOffTimeErrorSheetRef.hide()
   },
+
+  onCustomerNumberInput(e) {
+    console.log(e)
+  },
 });

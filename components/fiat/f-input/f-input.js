@@ -3,6 +3,7 @@ import addClass from '/utils/addClass'
 import removeClass from '/utils/removeClass'
 
 Component(FiatComponent({
+  exportInputHandler: true,
   mixins: [],
   data: {
     inputValue: '',
@@ -29,22 +30,32 @@ Component(FiatComponent({
   },
   didUnmount() {},
   methods: {
-    onInputFocus () {
+    onInputFocus (e) {
       const { inputTypeClass } = this.data
+      const { onInputFocus } = this.props
+      if (onInputFocus) onInputFocus(e)
       this.setData({
         inputTypeClass: addClass(inputTypeClass, 'f-input--focus')
       });
     },
-    onInputBlur () {
+    onInputBlur (e) {
+      const { onInputBlur } = this.props
       const { inputTypeClass } = this.data
+      if (onInputBlur) onInputBlur(e)
       this.setData({
         inputTypeClass: removeClass(inputTypeClass, 'f-input--focus')
       });
     },
     onInput (e) {
+      const { onInput } = this.props
+      const { value: inputValue } = e.detail
+
       this.setData({
-        inputValue: e.detail.value
+        inputValue,
       })
+
+      if (onInput) onInput(e)
+      
       if (e.detail.value && !this.props.showLoader) {
         this.setData({
           showClearIcon: true
@@ -59,7 +70,7 @@ Component(FiatComponent({
       this.setData({
         inputValue: '',
         showClearIcon: false,
-     })
+      })
     },
     setIconInnerLeftStyle () {
       const { inputCssClass } = this.data
