@@ -1,0 +1,11 @@
+<f-input class="customer-number-input mb-10"
+  onInput="onInput"
+  type="{{ type }}"
+  maxlength="{{ maxlength }}"
+  placeholder="{{ placeholder }}",
+  showLoader="{{ showLoader }}",
+  helperMsg="{{ helperMsg }}",
+  errorMsg="{{ errorMsg }}",
+  inputType="{{ inputType }}">
+  <slot slot="iconOutterRight" name="iconOutterRight"/>
+</f-input>
