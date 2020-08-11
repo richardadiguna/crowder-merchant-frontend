@@ -4,21 +4,12 @@
     "f-input": "/components/fiat/f-input/f-input",
     "f-toast": "/components/fiat/f-toast/f-toast",
 
-    "customer-number-input": "/components/customer-number-input/customer-number-input",
-    "denom-list": "/components/denom-list/denom-list",
-
     "error-sheet": "/components/error-sheet/error-sheet",
     "error-sheet-image": "/components/error-sheet/error-sheet-image/error-sheet-image",
     "error-sheet-title": "/components/error-sheet/error-sheet-title/error-sheet-title", 
     "error-sheet-content": "/components/error-sheet/error-sheet-content/error-sheet-content",
     "error-sheet-action": "/components/error-sheet/error-sheet-action/error-sheet-action",
 
-    "help-button": "/components/help-button/help-button",
-    "help-dialog": "/components/help-dialog/help-dialog",
-    "help-dialog-title": "/components/help-dialog/help-dialog-title/help-dialog-title",
-    "help-dialog-content": "/components/help-dialog/help-dialog-content/help-dialog-content",
-    "help-dialog-action": "/components/help-dialog/help-dialog-action/help-dialog-action",
-    
     "provider-list": "/components/provider-list/provider-list" 
   }
 }
