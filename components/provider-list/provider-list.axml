@@ -6,7 +6,7 @@
     type="title" 
   />
   <f-divider/>
-  <f-cell class="pl-16 pr-4 py-12">
+  <f-cell class="pl-16 pr-4 py-12" onTap="onProviderCellTap">
     <f-cell-icon w="30" h="30" class="mr-12">
       <f-icon name="dana-coin"/>
     </f-cell-icon>

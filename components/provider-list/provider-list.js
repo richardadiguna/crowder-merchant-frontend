@@ -7,5 +7,11 @@ Component({
   didMount() {},
   didUpdate() {},
   didUnmount() {},
-  methods: {},
+  methods: {
+    onProviderCellTap (e) {
+      my.navigateTo({
+        url: `/pages/cust-number-input/cust-number-input`
+      })
+    }
+  },
 });
