@@ -44,8 +44,10 @@ Page({
         name: 'Provider Name'
       }
     ],
-    providersSearchResult: []
+    providersSearchResult: [],
+    isSearch: false
   },
+
   onLoad(query) {
     // Page load
     console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
@@ -117,10 +119,15 @@ Page({
       }
     })
     if (searchKey) {
-      this.setData({ providersSearchResult: filtered })
+      this.setData({ 
+        providersSearchResult: filtered,
+        isSearch: true,
+      })
     } else {
-      this.setData({ providersSearchResult: this.data.providers })
+      this.setData({
+        providersSearchResult: this.data.providers,
+        isSearch: false,
+      })
     }
-    // todo: refactor for search result UI (empty or not empty) on other jira story
   }
 });
