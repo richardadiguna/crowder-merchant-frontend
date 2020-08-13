@@ -8,7 +8,7 @@ Component({
   didUpdate() {},
   didUnmount() {},
   methods: {
-    onProviderCellTap (e) {
+    onProviderCellTap () {
       my.navigateTo({
         url: `/pages/cust-number-input/cust-number-input`
       })
