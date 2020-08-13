@@ -1,4 +1,5 @@
 <view class="pl-16 pr-16 pb-16">
+  <provider-select class="mt-8"/>
   <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}">
     <help-button slot="iconOutterRight" onTap="openHelpDialog"/>
   </customer-number-input>

@@ -4,6 +4,7 @@
     
     "customer-number-input": "/components/customer-number-input/customer-number-input",
     "denom-list": "/components/denom-list/denom-list",
+    "provider-select": "/components/provider-select/provider-select",
 
     "help-button": "/components/help-button/help-button",
     "help-dialog": "/components/help-dialog/help-dialog",
