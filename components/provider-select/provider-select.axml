@@ -4,7 +4,7 @@
   <view class='provider-select__title f-caption caption-12 secondary'>{{ title }}</view>
   <view class='provider-select__body'>
     <f-icon name='dana-coin' w='28' h='28'/>
-    <view class='provider-select__name'>{{ provider.name }}</view>
+    <view class='provider-select__name f-body-16'>{{ provider.name }}</view>
     <f-btn type='secondary' size='small' class='provider-select__btn'>
       CHANGE
     </f-btn>
