@@ -6,7 +6,7 @@
   <view a:if="{{ providers.length === 0}}" class="f-text-center mt-32">
     <image 
       class="mx-auto img-search-not-found" 
-      src="https://a.m.dana.id/resource/imgs/insurance/search-not-found.svg"/>
+      src="https://a.m.dana.id/resource/imgs/miniprogram/search-not-found.svg"/>
     <view class="f-title title-18 my-8">
       Oops, search not found.
     </view>
