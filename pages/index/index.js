@@ -58,6 +58,10 @@ Page({
     this.setData({ selectedProvider })
   },
 
+  onProviderReset() {
+    this.setData({ selectedProvider: null })
+  },
+
   saveToastRef(ref) {
     this.toastRef = ref
   },

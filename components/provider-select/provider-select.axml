@@ -5,7 +5,7 @@
   <view class='provider-select__body'>
     <f-icon name='dana-coin' w='28' h='28'/>
     <view class='provider-select__name f-body-16'>{{ provider.name }}</view>
-    <f-btn type='secondary' size='small' class='provider-select__btn'>
+    <f-btn type='secondary' size='small' class='provider-select__btn' onTap='onReset'>
       CHANGE
     </f-btn>
   </view>

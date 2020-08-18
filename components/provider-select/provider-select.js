@@ -6,9 +6,15 @@ Component({
     provider: {
       name: "Provider Name",
     },
+    onReset: null,
   },
   didMount() {},
   didUpdate() {},
   didUnmount() {},
-  methods: {},
+  methods: {
+    onReset() {
+      const { onReset } = this.props
+      if (onReset) onReset()
+    },
+  },
 });

@@ -44,7 +44,7 @@
 <image a:if="{{ selectedProvider }}" class="banner" mode="widthFix" src="https://a.m.dana.id/resource/imgs/miniprogram/img-banner-default.svg"/>
 
 <view class="pl-16 pr-16 pb-16" a:if="{{ selectedProvider }}">
-  <provider-select class="mt-8 mb-12"/>
+  <provider-select class="mt-8 mb-12" provider="{{ selectedProvider }}" onReset="onProviderReset"/>
   <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}">
     <help-button slot="iconOutterRight" onTap="openHelpDialog"/>
   </customer-number-input>
