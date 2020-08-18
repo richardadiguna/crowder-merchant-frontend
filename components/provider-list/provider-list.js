@@ -2,16 +2,17 @@ Component({
   mixins: [],
   data: {},
   props: {
-    providers: [], 
+    providers: [],
+    onSelect: null,
   },
   didMount() {},
   didUpdate() {},
   didUnmount() {},
   methods: {
-    onProviderCellTap () {
-      my.navigateTo({
-        url: `/pages/cust-number-input/cust-number-input`
-      })
+    onProviderCellTap (e, props) {
+      const { onSelect } = this.props
+      const { provider } = props
+      if (onSelect) onSelect(provider)
     }
   },
 });

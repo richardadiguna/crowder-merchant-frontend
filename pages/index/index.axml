@@ -1,4 +1,4 @@
-<view class="f-body">
+<view class="f-body" a:if="{{ !selectedProvider }}">
   <f-input placeholder="Search your provider" class="p-16" onInput="onSearchInput">
     <image src="/components/fiat/assets/search.svg" slot="iconInnerLeft"/>
   </f-input>
@@ -6,6 +6,7 @@
   <provider-list 
     providers="{{ providersSearchResult }}" 
     isSearch="{{ isSearch }}"
+    onSelect="onProviderSelect"
   />
 
   <f-toast ref="saveToastRef"/>
@@ -38,4 +39,26 @@
   <f-btn type="secondary" size="small">
     <navigator url="/pages/fiat/index/index">go to FIAT components main page</navigator>
   </f-btn>
+</view>
+
+<image a:if="{{ selectedProvider }}" class="banner" mode="widthFix" src="https://a.m.dana.id/resource/imgs/miniprogram/img-banner-default.svg"/>
+
+<view class="pl-16 pr-16 pb-16" a:if="{{ selectedProvider }}">
+  <provider-select class="mt-8 mb-12" provider="{{ selectedProvider }}" onReset="onProviderReset"/>
+  <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}">
+    <help-button slot="iconOutterRight" onTap="openHelpDialog"/>
+  </customer-number-input>
+
+  <help-dialog ref="saveHelpDialogRef">
+    <help-dialog-title>How to get your customer number info modal</help-dialog-title>
+    <help-dialog-content>
+      <view class="mb-16">{{ helpDialogMessage }}</view>
+      <image src="https://a.m.dana.id/marmot/s/2019/3/20/5e451c0a-c451-430e-b001-c09a36a2999c.jpg"/>
+    </help-dialog-content>
+    <help-dialog-action>
+      <f-btn size="small" onTap="closeHelpDialog">I UNDERSTAND</f-btn>
+    </help-dialog-action>
+  </help-dialog>
+
+  <denom-list denoms="{{ denoms }}"/>
 </view>
