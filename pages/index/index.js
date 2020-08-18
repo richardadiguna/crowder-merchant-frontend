@@ -55,7 +55,7 @@ Page({
   },
 
   onProviderSelect(selectedProvider) {
-    this.setData({ selectedProvider })
+    this.setData({ selectedProvider, denoms: [] })
   },
 
   onProviderReset() {
