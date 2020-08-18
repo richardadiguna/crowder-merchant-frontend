@@ -1,4 +1,5 @@
 import denoms from './denoms'
+import providers from './providers'
 
 Page({
   data: {
@@ -9,44 +10,7 @@ Page({
     cutOffTimeErrorMessage: `
       Your transaction cannot be processed right now. Please try again after 01.00 AM.
     `,
-    providers: [
-      {
-        section: 'A',
-        name: 'Provider Name A'
-      },
-      {
-        section: 'A',
-        name: 'Provider Name'
-      },
-      {
-        section: 'A',
-        name: 'Provider Name'
-      },
-      {
-        section: 'B',
-        name: 'Provider Name'
-      },
-      {
-        section: 'B',
-        name: 'Provider Name'
-      },
-      {
-        section: 'C',
-        name: 'Provider Name C'
-      },
-      {
-        section: 'C',
-        name: 'Provider Name'
-      },
-      {
-        section: 'C',
-        name: 'Provider Name'
-      },
-      {
-        section: 'D',
-        name: 'Provider Name'
-      }
-    ],
+    providers,
     providersSearchResult: [],
     isSearch: false,
 
