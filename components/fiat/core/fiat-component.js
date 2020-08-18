@@ -13,7 +13,7 @@ const FiatComponent = (component) => {
   const methods = {
     onTap (e) {
       if (this.props.onTap) {
-        this.props.onTap(e)
+        this.props.onTap(e, this.props)
       }
     },
   }

@@ -1,4 +1,4 @@
- <image class="banner" mode="widthFix" src="https://a.m.dana.id/resource/imgs/miniprogram/img-banner-default.svg"/>
+<image class="banner" mode="widthFix" src="https://a.m.dana.id/resource/imgs/miniprogram/img-banner-default.svg"/>
 
 <view class="pl-16 pr-16 pb-16">
   <provider-select class="mt-8 mb-12"/>
