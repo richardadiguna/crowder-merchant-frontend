@@ -1,6 +1,8 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/provider-select/provider-select",
+    
     "pages/fiat/button/button",
     "pages/fiat/cell/cell",
     "pages/fiat/index/index",
