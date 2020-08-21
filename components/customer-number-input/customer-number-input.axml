@@ -1,4 +1,5 @@
 <f-input class="customer-number-input mb-10"
+  label="INPUT NUMBER"
   onInput="onInput"
   type="{{ type }}"
   maxlength="{{ maxlength }}"
