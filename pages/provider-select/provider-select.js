@@ -1,3 +1,5 @@
+import denoms from '/data/denoms'
+
 Page({
   data: {
     providerName: '',
@@ -6,6 +8,8 @@ Page({
       Sebutkan nama dan nomor telepon yang terdaftar sebelumnya.
       Petugas kantor pembiayaan akan memberitahukan nomor kontrak anda.
     `,
+    customerNumberLoading: false,
+    denoms: [],
   },
   onLoad(query) {
     this.setData({ providerName: query.providerName })
@@ -19,5 +23,19 @@ Page({
   },
   closeHelpDialog() {
     this.helpDialogRef.hide()
+  },
+
+  onCustomerNumberInput(e) {
+    const { value } = e.detail
+
+    clearTimeout(this.customerNumberTimer)
+    this.setData({ customerNumberLoading: true })
+    this.customerNumberTimer = setTimeout(() => {
+      if (value) {
+        this.setData({ denoms, customerNumberLoading: false })
+      } else {
+        this.setData({ denoms: [], customerNumberLoading: false })
+      }
+    }, 500)
   },
 });

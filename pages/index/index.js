@@ -1,4 +1,3 @@
-import denoms from '/data/denoms'
 import providers from '/data/providers'
 
 Page({
@@ -12,9 +11,6 @@ Page({
     providers,
     providersSearchResult: [],
     isSearch: false,
-
-    denoms: [],
-    customerNumberLoading: false,
   },
 
   onLoad(query) {
@@ -98,19 +94,5 @@ Page({
         isSearch: false,
       })
     }
-  },
-
-  onCustomerNumberInput(e) {
-    const { value } = e.detail
-
-    clearTimeout(this.customerNumberTimer)
-    this.setData({ customerNumberLoading: true })
-    this.customerNumberTimer = setTimeout(() => {
-      if (value) {
-        this.setData({ denoms, customerNumberLoading: false })
-      } else {
-        this.setData({ denoms: [], customerNumberLoading: false })
-      }
-    }, 500)
   },
 });
