@@ -13,11 +13,6 @@ Page({
     providersSearchResult: [],
     isSearch: false,
 
-    helpDialogMessage: `
-      Hubungi call center kantor pembiayaan anda.
-      Sebutkan nama dan nomor telepon yang terdaftar sebelumnya.
-      Petugas kantor pembiayaan akan memberitahukan nomor kontrak anda.
-    `,
     denoms: [],
     customerNumberLoading: false,
   },
@@ -103,16 +98,6 @@ Page({
         isSearch: false,
       })
     }
-  },
-
-  saveHelpDialogRef(ref) {
-    this.helpDialogRef = ref
-  },
-  openHelpDialog() {
-    this.helpDialogRef.show()
-  },
-  closeHelpDialog() {
-    this.helpDialogRef.hide()
   },
 
   onCustomerNumberInput(e) {

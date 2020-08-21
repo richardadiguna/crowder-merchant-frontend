@@ -1,5 +1,15 @@
 {
   "usingComponents": {
-    "provider-name": "/components/provider-name/provider-name"
+    "provider-name": "/components/provider-name/provider-name",
+    "customer-number-input": "/components/customer-number-input/customer-number-input",
+    "denom-list": "/components/denom-list/denom-list",
+
+    "help-button": "/components/help-button/help-button",
+    "help-dialog": "/components/help-dialog/help-dialog",
+    "help-dialog-title": "/components/help-dialog/help-dialog-title/help-dialog-title",
+    "help-dialog-content": "/components/help-dialog/help-dialog-content/help-dialog-content",
+    "help-dialog-action": "/components/help-dialog/help-dialog-action/help-dialog-action",
+
+    "f-btn": "/components/fiat/f-btn/f-btn"
   }
 }

@@ -8,7 +8,7 @@ Component({
   didUpdate() {},
   didUnmount() {},
   methods: {
-    onProviderCellTap (props) {
+    onProviderCellTap (e, props) {
       const { provider } = props
       my.navigateTo({
         url: `/pages/provider-select/provider-select?providerName=${provider.name || ''}`
