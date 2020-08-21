@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "provider-name": "/components/provider-name/provider-name"
+  }
+}
