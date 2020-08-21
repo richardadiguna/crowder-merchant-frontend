@@ -3,7 +3,6 @@ import providers from '/data/providers'
 
 Page({
   data: {
-    selectedProvider: null,
     generalErrorMessage: `
       We can’t process your customer number right now. Give it a try later, perhaps? 
     `,
@@ -52,14 +51,6 @@ Page({
       desc: 'DANA Mini Program tempalate for bill payment',
       path: 'pages/index/index',
     };
-  },
-
-  onProviderSelect(selectedProvider) {
-    this.setData({ selectedProvider, denoms: [] })
-  },
-
-  onProviderReset() {
-    this.setData({ selectedProvider: null })
   },
 
   saveToastRef(ref) {

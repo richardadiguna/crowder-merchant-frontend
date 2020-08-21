@@ -3,18 +3,14 @@ Component({
   data: {},
   props: {
     title: "PROVIDER NAME",
-    provider: {
-      name: "Provider Name",
-    },
-    onReset: null,
+    providerName: "Provider Name",
   },
   didMount() {},
   didUpdate() {},
   didUnmount() {},
   methods: {
     onReset() {
-      const { onReset } = this.props
-      if (onReset) onReset()
+      my.navigateBack()
     },
   },
 });

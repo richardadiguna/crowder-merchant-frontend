@@ -1,5 +1,4 @@
 <image class="banner" mode="widthFix" src="https://a.m.dana.id/resource/imgs/miniprogram/img-banner-default.svg"/>
-
-<view>
-  {{ providerName }}
+<view class="pl-16 pr-16 pb-16">
+  <provider-name class="mt-8 mb-12" providerName="{{ providerName }}"/>
 </view>
