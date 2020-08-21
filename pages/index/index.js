@@ -1,5 +1,5 @@
-import denoms from './denoms'
-import providers from './providers'
+import denoms from '/data/denoms'
+import providers from '/data/providers'
 
 Page({
   data: {
