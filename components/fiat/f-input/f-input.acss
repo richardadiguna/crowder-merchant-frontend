@@ -46,6 +46,8 @@
 .f-input__icon-outter-right image {
   max-height: 28px;
   max-width: 28px;
+  min-height: 28px;
+  min-width: 28px;
   margin: 28px 0px 0px 8px;
 }
 
