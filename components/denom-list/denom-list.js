@@ -4,6 +4,9 @@ Component({
     cutOffTimeErrorMessage: `
       Your transaction cannot be processed right now. Please try again after 01.00 AM.
     `,
+    generalErrorMessage: `
+      We can’t process your customer number right now. Give it a try later, perhaps? 
+    `,
   },
   props: {
     denoms: [],
@@ -46,7 +49,7 @@ Component({
           this.showCutOffTimeError()
           break
         case '100.000':
-          console.log('fail 2')
+          this.showGeneralError()
           break
         case '200.000':
           console.log('fail 3')
@@ -58,6 +61,7 @@ Component({
           console.log('success') // todo dummy call tradepay
       }
     },
+
     saveCutOffTimeErrorSheetRef(ref) {
       this.cutOffTimeErrorSheetRef = ref
     },
@@ -66,6 +70,16 @@ Component({
     },
     hideCutOffTimeError() {
       this.cutOffTimeErrorSheetRef.hide()
+    },
+
+    saveGeneralErrorSheetRef(ref) {
+      this.generalErrorSheetRef = ref
+    },
+    showGeneralError() {
+      this.generalErrorSheetRef.show()
+    },
+    hideGeneralError() {
+      this.generalErrorSheetRef.hide()
     },
   },
 });

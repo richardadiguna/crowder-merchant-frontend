@@ -2,9 +2,6 @@ import providers from '/data/providers'
 
 Page({
   data: {
-    generalErrorMessage: `
-      We can’t process your customer number right now. Give it a try later, perhaps? 
-    `,
     providers,
     providersSearchResult: [],
     isSearch: false,
@@ -49,16 +46,6 @@ Page({
       snackbar: true,
       actionText: 'OKAY',
     })
-  },
-
-  saveGeneralErrorSheetRef(ref) {
-    this.generalErrorSheetRef = ref
-  },
-  showGeneralError() {
-    this.generalErrorSheetRef.show()
-  },
-  hideGeneralError() {
-    this.generalErrorSheetRef.hide()
   },
 
   onSearchInput(e)  {
