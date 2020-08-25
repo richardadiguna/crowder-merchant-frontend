@@ -10,6 +10,7 @@ Page({
     `,
     customerNumberLoading: false,
     denoms: [],
+    custNumberInputErrorMsg: ''
   },
   onLoad(query) {
     this.setData({ providerName: query.providerName })
@@ -38,4 +39,8 @@ Page({
       }
     }, 500)
   },
+
+  onInputError(errorMsg) {
+    this.setData({ custNumberInputErrorMsg: errorMsg })
+  }
 });

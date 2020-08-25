@@ -11,6 +11,7 @@ Component({
   props: {
     denoms: [],
     short: true,
+    onInputError: () => {},
   },
   didMount() {
     this.updateDenomRows()
@@ -39,6 +40,7 @@ Component({
       this.setData({ denomRows })
     },
     onDenomCardTap (e) {
+      this.clearInputError()
       const { goods } = e.target.dataset
       const denomAmount = goods.denom.amount
       switch(denomAmount) {
@@ -55,7 +57,7 @@ Component({
           this.showConnectionUnstableError()
           break
         case '500.000':
-          console.log('fail 4')
+          this.triggerInputError()
           break
         default:
           console.log('success') // todo dummy call tradepay
@@ -91,5 +93,12 @@ Component({
         actionText: 'OKAY',
       })
     },
+
+    triggerInputError () {
+      this.props.onInputError('Number not found. Please try again')
+    },
+    clearInputError () {
+      this.props.onInputError('')
+    }
   },
 });
