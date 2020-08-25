@@ -44,9 +44,6 @@ Component({
       const { goods } = e.target.dataset
       const denomAmount = goods.denom.amount
       switch(denomAmount) {
-        case '20.000':
-          console.log('success') // todo dummy call tradepay
-          break
         case '50.000':
           this.showCutOffTimeError()
           break
@@ -60,7 +57,7 @@ Component({
           this.triggerInputError()
           break
         default:
-          console.log('success') // todo dummy call tradepay
+          this.createOrder()
       }
     },
 
@@ -99,6 +96,27 @@ Component({
     },
     clearInputError () {
       this.props.onInputError('')
+    },
+
+    createOrder () {
+      // this is only an example, call your backend service to get `redirectionUrl`
+      const redirectionUrl = 'http://m.test02.dana.id/m/portal/cashier/checkout?bizNo=20200825111212800110166733200292930&timestamp=1598340695974&mid=216620000091178678235&sign='
+      // my.tradePay will open DANA cashier page
+      // my.tradePay won't work on Mini Program Studio, need to test on real device
+      my.tradePay({
+        paymentUrl: redirectionUrl,
+      }, function (res) {
+        // callback after done in cashier page
+        if (res.success) {
+          my.alert({
+            content: JSON.stringify(res),
+          })
+        } else {
+          my.alert({
+            content: JSON.stringify(res),
+          })
+        }
+      })
     }
   },
 });
