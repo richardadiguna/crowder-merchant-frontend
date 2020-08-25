@@ -2,11 +2,15 @@
 <view class="pl-16 pr-16 pb-16">
   <provider-name class="mt-8 mb-12" providerName="{{ providerName }}"/>
 
-  <customer-number-input onInput="onCustomerNumberInput" showLoader="{{ customerNumberLoading }}">
+  <customer-number-input 
+    onInput="onCustomerNumberInput" 
+    showLoader="{{ customerNumberLoading }}"
+    errorMsg="{{ custNumberInputErrorMsg }}"
+  >
     <help-button slot="iconOutterRight" onTap="openHelpDialog"/>
   </customer-number-input>
 
-  <denom-list denoms="{{ denoms }}"/>
+  <denom-list denoms="{{ denoms }}" onInputError="onInputError" />
 </view>
 
 <help-dialog ref="saveHelpDialogRef">

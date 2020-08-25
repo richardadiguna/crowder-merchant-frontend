@@ -7,7 +7,7 @@ Component(FiatComponent({
   props: {
     type: 'text', // text || number || digit
     maxlength: 140,
-    placeholder: '',
+    placeholder: 'Placeholder message',
     showLoader: false,
     helperMsg: '',
     errorMsg: '',

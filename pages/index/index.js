@@ -2,12 +2,6 @@ import providers from '/data/providers'
 
 Page({
   data: {
-    generalErrorMessage: `
-      We can’t process your customer number right now. Give it a try later, perhaps? 
-    `,
-    cutOffTimeErrorMessage: `
-      Your transaction cannot be processed right now. Please try again after 01.00 AM.
-    `,
     providers,
     providersSearchResult: [],
     isSearch: false,
@@ -42,36 +36,6 @@ Page({
       desc: 'DANA Mini Program tempalate for bill payment',
       path: 'pages/index/index',
     };
-  },
-
-  saveToastRef(ref) {
-    this.toastRef = ref
-  },
-  showConnectionUnstableError() {
-    this.toastRef.warning('The network connection is unstable. Please try again later.', {
-      snackbar: true,
-      actionText: 'OKAY',
-    })
-  },
-
-  saveGeneralErrorSheetRef(ref) {
-    this.generalErrorSheetRef = ref
-  },
-  showGeneralError() {
-    this.generalErrorSheetRef.show()
-  },
-  hideGeneralError() {
-    this.generalErrorSheetRef.hide()
-  },
-
-  saveCutOffTimeErrorSheetRef(ref) {
-    this.cutOffTimeErrorSheetRef = ref
-  },
-  showCutOffTimeError() {
-    this.cutOffTimeErrorSheetRef.show()
-  },
-  hideCutOffTimeError() {
-    this.cutOffTimeErrorSheetRef.hide()
   },
 
   onSearchInput(e)  {

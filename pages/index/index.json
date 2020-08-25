@@ -1,15 +1,6 @@
 {
   "usingComponents": {
-    "f-btn": "/components/fiat/f-btn/f-btn",
     "f-input": "/components/fiat/f-input/f-input",
-    "f-toast": "/components/fiat/f-toast/f-toast",
-
-    "error-sheet": "/components/error-sheet/error-sheet",
-    "error-sheet-image": "/components/error-sheet/error-sheet-image/error-sheet-image",
-    "error-sheet-title": "/components/error-sheet/error-sheet-title/error-sheet-title", 
-    "error-sheet-content": "/components/error-sheet/error-sheet-content/error-sheet-content",
-    "error-sheet-action": "/components/error-sheet/error-sheet-action/error-sheet-action",
-
     "provider-list": "/components/provider-list/provider-list"
   }
 }

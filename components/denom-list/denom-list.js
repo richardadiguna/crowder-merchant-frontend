@@ -1,10 +1,17 @@
 Component({
   data: {
     denomRows: [],
+    cutOffTimeErrorMessage: `
+      Your transaction cannot be processed right now. Please try again after 01.00 AM.
+    `,
+    generalErrorMessage: `
+      We can’t process your customer number right now. Give it a try later, perhaps? 
+    `,
   },
   props: {
     denoms: [],
     short: true,
+    onInputError: () => {},
   },
   didMount() {
     this.updateDenomRows()
@@ -32,5 +39,66 @@ Component({
       }
       this.setData({ denomRows })
     },
+    onDenomCardTap (e) {
+      this.clearInputError()
+      const { goods } = e.target.dataset
+      const denomAmount = goods.denom.amount
+      switch(denomAmount) {
+        case '20.000':
+          console.log('success') // todo dummy call tradepay
+          break
+        case '50.000':
+          this.showCutOffTimeError()
+          break
+        case '100.000':
+          this.showGeneralError()
+          break
+        case '200.000':
+          this.showConnectionUnstableError()
+          break
+        case '500.000':
+          this.triggerInputError()
+          break
+        default:
+          console.log('success') // todo dummy call tradepay
+      }
+    },
+
+    saveCutOffTimeErrorSheetRef(ref) {
+      this.cutOffTimeErrorSheetRef = ref
+    },
+    showCutOffTimeError() {
+      this.cutOffTimeErrorSheetRef.show()
+    },
+    hideCutOffTimeError() {
+      this.cutOffTimeErrorSheetRef.hide()
+    },
+
+    saveGeneralErrorSheetRef(ref) {
+      this.generalErrorSheetRef = ref
+    },
+    showGeneralError() {
+      this.generalErrorSheetRef.show()
+    },
+    hideGeneralError() {
+      this.generalErrorSheetRef.hide()
+    },
+
+    saveToastRef(ref) {
+      this.toastRef = ref
+    },
+    showConnectionUnstableError() {
+      this.toastRef.warning('The network connection is unstable. Please try again later.', {
+        snackbar: true,
+        actionText: 'OKAY',
+      })
+    },
+
+    triggerInputError () {
+      this.props.onInputError('Number not found. Please try again')
+    },
+    clearInputError () {
+      this.props.onInputError('')
+    }
   },
 });

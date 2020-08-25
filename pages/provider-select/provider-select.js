@@ -10,6 +10,7 @@ Page({
     `,
     customerNumberLoading: false,
     denoms: [],
+    custNumberInputErrorMsg: ''
   },
   onLoad(query) {
     this.setData({ providerName: query.providerName })
@@ -27,7 +28,7 @@ Page({
 
   onCustomerNumberInput(e) {
     const { value } = e.detail
-
+    this.setData({ custNumberInputErrorMsg: '' })
     clearTimeout(this.customerNumberTimer)
     this.setData({ customerNumberLoading: true })
     this.customerNumberTimer = setTimeout(() => {
@@ -38,4 +39,8 @@ Page({
       }
     }, 500)
   },
+
+  onInputError(errorMsg) {
+    this.setData({ custNumberInputErrorMsg: errorMsg })
+  }
 });

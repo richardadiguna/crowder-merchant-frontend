@@ -19,6 +19,11 @@
   margin-bottom: 4px;
 }
 
+.f-input__text-box--small-label .f-input__label {
+  font-size: 12px;
+  line-height: 1.33;
+}
+
 .f-input__container{
   position:relative;
   width:100%
