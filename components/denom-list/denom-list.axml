@@ -6,7 +6,9 @@
     a:for-item="denomRow">
     <view class="denom-card"
       a:for="{{ denomRow }}"
-      a:for-item="denomColumn">
+      a:for-item="denomColumn"
+      onTap="onDenomCardTap" data-goods="{{ denomColumn }}"
+    >
       <view class="desc title-24">
         {{ denom.major(denomColumn.denom.amount, short) }}
         <text class="minor title-12 ml-2">

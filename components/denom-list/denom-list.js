@@ -32,5 +32,28 @@ Component({
       }
       this.setData({ denomRows })
     },
+    onDenomCardTap (e) {
+      const { goods } = e.target.dataset
+      const denomAmount = goods.denom.amount
+      switch(denomAmount) {
+        case '20.000':
+          console.log('success') // todo dummy call tradepay
+          break
+        case '50.000':
+          console.log('fail 1')
+          break
+        case '100.000':
+          console.log('fail 2')
+          break
+        case '200.000':
+          console.log('fail 3')
+          break
+        case '500.000':
+          console.log('fail 4')
+          break
+        default:
+          console.log('success') // todo dummy call tradepay
+      }
+    }
   },
 });

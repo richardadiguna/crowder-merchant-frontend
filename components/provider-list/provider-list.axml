@@ -40,26 +40,28 @@
   <f-divider/>
 </view>
 
-<view class="my-32"></view>
-<f-divider 
-  class="py-4 px-16" 
-  title="FIAT COMPONENTS" 
-  type="title" 
-/>
-<f-divider/>
-<f-cell class="pl-16 pr-4 py-12">
-  <f-cell-icon w="30" h="30" class="mr-12">
-    <f-icon name="dana-coin"/>
-  </f-cell-icon>
-  <f-cell-content>
-    <f-cell-label>
-      <navigator url="/pages/fiat/index/index">
-        Go to FIAT Components
-      </navigator>
-    </f-cell-label>
-  </f-cell-content>
-  <f-cell-action class="f-flex flex-center">
-    <view class="arrow"/>
-  </f-cell-action>
-</f-cell>
-<f-divider/>
+
+<view a:if="{{ !isSearch }}"  class="mt-32">
+  <f-divider 
+    class="py-4 px-16" 
+    title="FIAT COMPONENTS" 
+    type="title" 
+  />
+  <f-divider/>
+  <f-cell class="pl-16 pr-4 py-12">
+    <f-cell-icon w="30" h="30" class="mr-12">
+      <f-icon name="dana-coin"/>
+    </f-cell-icon>
+    <f-cell-content>
+      <f-cell-label>
+        <navigator url="/pages/fiat/index/index">
+          Go to FIAT Components
+        </navigator>
+      </f-cell-label>
+    </f-cell-content>
+    <f-cell-action class="f-flex flex-center">
+      <view class="arrow"/>
+    </f-cell-action>
+  </f-cell>
+  <f-divider/>
+</view>
