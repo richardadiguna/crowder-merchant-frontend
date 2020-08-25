@@ -28,7 +28,7 @@ Page({
 
   onCustomerNumberInput(e) {
     const { value } = e.detail
-
+    this.setData({ custNumberInputErrorMsg: '' })
     clearTimeout(this.customerNumberTimer)
     this.setData({ customerNumberLoading: true })
     this.customerNumberTimer = setTimeout(() => {
