@@ -39,3 +39,5 @@
     <f-btn onTap="hideGeneralError">GOT IT</f-btn>
   </error-sheet-action>
 </error-sheet>
+
+<f-toast ref="saveToastRef"/>

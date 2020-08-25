@@ -38,16 +38,6 @@ Page({
     };
   },
 
-  saveToastRef(ref) {
-    this.toastRef = ref
-  },
-  showConnectionUnstableError() {
-    this.toastRef.warning('The network connection is unstable. Please try again later.', {
-      snackbar: true,
-      actionText: 'OKAY',
-    })
-  },
-
   onSearchInput(e)  {
     const searchKey = e.detail.value || ''
     const lowerCaseSearchKey = searchKey.toLowerCase()

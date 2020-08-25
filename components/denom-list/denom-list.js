@@ -52,7 +52,7 @@ Component({
           this.showGeneralError()
           break
         case '200.000':
-          console.log('fail 3')
+          this.showConnectionUnstableError()
           break
         case '500.000':
           console.log('fail 4')
@@ -80,6 +80,16 @@ Component({
     },
     hideGeneralError() {
       this.generalErrorSheetRef.hide()
+    },
+
+    saveToastRef(ref) {
+      this.toastRef = ref
+    },
+    showConnectionUnstableError() {
+      this.toastRef.warning('The network connection is unstable. Please try again later.', {
+        snackbar: true,
+        actionText: 'OKAY',
+      })
     },
   },
 });

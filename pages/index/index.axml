@@ -7,13 +7,4 @@
     providers="{{ providersSearchResult }}" 
     isSearch="{{ isSearch }}"
   />
-
-  <f-toast ref="saveToastRef"/>
-  
-  <f-btn class="mt-16 mb-16" type="secondary" size="small" onTap="showGeneralError">
-    Error - General Error
-  </f-btn>
-  <f-btn class="mb-16" type="secondary" size="small" onTap="showConnectionUnstableError">
-    Error - Connection Unstable
-  </f-btn>
 </view>
