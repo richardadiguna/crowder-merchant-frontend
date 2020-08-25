@@ -34,8 +34,4 @@
   <f-btn class="mb-16" type="secondary" size="small" onTap="showConnectionUnstableError">
     Error - Connection Unstable
   </f-btn>
-
-  <f-btn type="secondary" size="small">
-    <navigator url="/pages/fiat/index/index">go to FIAT components main page</navigator>
-  </f-btn>
 </view>
