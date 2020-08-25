@@ -6,6 +6,12 @@
   />
 
   <f-input 
+    placeholder="placeholder" 
+    label="text-box with small style label"
+    class="mb-16 f-input__text-box--small-label"
+  />
+
+  <f-input 
     placeholder="example placeholder" 
     label="text-box with inner icon left"
     class="mb-16"
