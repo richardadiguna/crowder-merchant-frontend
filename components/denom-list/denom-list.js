@@ -1,6 +1,9 @@
 Component({
   data: {
     denomRows: [],
+    cutOffTimeErrorMessage: `
+      Your transaction cannot be processed right now. Please try again after 01.00 AM.
+    `,
   },
   props: {
     denoms: [],
@@ -40,7 +43,7 @@ Component({
           console.log('success') // todo dummy call tradepay
           break
         case '50.000':
-          console.log('fail 1')
+          this.showCutOffTimeError()
           break
         case '100.000':
           console.log('fail 2')
@@ -54,6 +57,15 @@ Component({
         default:
           console.log('success') // todo dummy call tradepay
       }
-    }
+    },
+    saveCutOffTimeErrorSheetRef(ref) {
+      this.cutOffTimeErrorSheetRef = ref
+    },
+    showCutOffTimeError() {
+      this.cutOffTimeErrorSheetRef.show()
+    },
+    hideCutOffTimeError() {
+      this.cutOffTimeErrorSheetRef.hide()
+    },
   },
 });

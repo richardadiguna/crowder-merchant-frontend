@@ -5,9 +5,6 @@ Page({
     generalErrorMessage: `
       We can’t process your customer number right now. Give it a try later, perhaps? 
     `,
-    cutOffTimeErrorMessage: `
-      Your transaction cannot be processed right now. Please try again after 01.00 AM.
-    `,
     providers,
     providersSearchResult: [],
     isSearch: false,
@@ -62,16 +59,6 @@ Page({
   },
   hideGeneralError() {
     this.generalErrorSheetRef.hide()
-  },
-
-  saveCutOffTimeErrorSheetRef(ref) {
-    this.cutOffTimeErrorSheetRef = ref
-  },
-  showCutOffTimeError() {
-    this.cutOffTimeErrorSheetRef.show()
-  },
-  hideCutOffTimeError() {
-    this.cutOffTimeErrorSheetRef.hide()
   },
 
   onSearchInput(e)  {

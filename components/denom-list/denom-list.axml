@@ -21,3 +21,12 @@
     </view> 
   </view>
 </view>
+
+<error-sheet ref="saveCutOffTimeErrorSheetRef">
+  <error-sheet-image src="https://a.m.dana.id/resource/imgs/miniprogram/failed.png"/>
+  <error-sheet-title>Ah, you came at the wrong time</error-sheet-title>
+  <error-sheet-content>{{ cutOffTimeErrorMessage }}</error-sheet-content>
+  <error-sheet-action>
+    <f-btn onTap="hideCutOffTimeError">GOT IT</f-btn>
+  </error-sheet-action>
+</error-sheet>
