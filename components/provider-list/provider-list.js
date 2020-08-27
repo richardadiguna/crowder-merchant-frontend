@@ -13,6 +13,11 @@ Component({
       my.navigateTo({
         url: `/pages/provider-select/provider-select?providerName=${provider.name || ''}`
       })
+    },
+    onTapFiatCell () {
+      my.navigateTo({ 
+        url: '/pages/fiat/index/index'
+      })
     }
   },
 });

@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "FIAT - Input",
   "usingComponents": {
     "f-input": "/components/fiat/f-input/f-input"
   }
