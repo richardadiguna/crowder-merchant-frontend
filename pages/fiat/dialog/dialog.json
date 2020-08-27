@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "FIAT Component - Dialog",
   "usingComponents": {
     "f-dialog": "/components/fiat/f-dialog/f-dialog",
     "f-btn": "/components/fiat/f-btn/f-btn",
