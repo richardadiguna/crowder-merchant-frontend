@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "FIAT Component - Cell",
+  "defaultTitle": "FIAT - Cell",
   "usingComponents": {
     "f-cell": "/components/fiat/f-cell/f-cell",
     "f-cell-action": "/components/fiat/f-cell-action/f-cell-action",

@@ -1,21 +1,14 @@
-<view class="f-body m-16">
-  <view class="f-title title-20 mb-16">FIAT Components</view>
-  <f-btn type="secondary" size="small" class="mb-16">
-    <navigator url="/pages/fiat/button/button">Button</navigator>
-  </f-btn>
-  <f-btn type="secondary" size="small" class="mb-16">
-    <navigator url="/pages/fiat/cell/cell">Cell</navigator>
-  </f-btn>
-  <f-btn type="secondary" size="small" class="mb-16">
-    <navigator url="/pages/fiat/dialog/dialog">Dialog</navigator>
-  </f-btn>
-  <f-btn type="secondary" size="small" class="mb-16">
-    <navigator url="/pages/fiat/sheet/sheet">Sheet</navigator>
-  </f-btn>
-  <f-btn type="secondary" size="small" class="mb-16">
-    <navigator url="/pages/fiat/toast/toast">Toast</navigator>
-  </f-btn>
-  <f-btn type="secondary" size="small">
-    <navigator url="/pages/fiat/input/input">Input</navigator>
-  </f-btn>
+<view class="f-title title-20 m-16">FIAT Components</view>
+<view a:for="{{fiatPages}}" onTap="onTapCell" data-url="{{ item.url }}">
+  <f-cell class="pl-16 pr-4 py-12">
+    <f-cell-content>
+      <f-cell-label>
+        {{ item.name }}
+      </f-cell-label>
+    </f-cell-content>
+    <f-cell-action>
+      <view class="arrow"/>
+    </f-cell-action>
+  </f-cell>
+  <f-divider/>
 </view>

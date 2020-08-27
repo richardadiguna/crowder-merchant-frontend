@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "FIAT Component - Toast",
+  "defaultTitle": "FIAT - Toast",
   "usingComponents": {
     "f-btn": "/components/fiat/f-btn/f-btn",
     "f-toast": "/components/fiat/f-toast/f-toast"

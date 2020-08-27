@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "FIAT Component - Sheet",
+  "defaultTitle": "FIAT - Sheet",
   "usingComponents": {
     "f-btn": "/components/fiat/f-btn/f-btn",
     "f-card": "/components/fiat/f-card/f-card",
