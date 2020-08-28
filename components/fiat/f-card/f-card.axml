@@ -1,3 +1,5 @@
-<view class="f-card">
+<import-sjs name="element" from="../../../utils/element.sjs"/>
+
+<view class="{{ element.classAttr('f-card', className) }}">
   <slot/>
 </view>
