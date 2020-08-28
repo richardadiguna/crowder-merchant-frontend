@@ -1,15 +1,15 @@
-<view>
+<view class="m-16">
   <f-btn type="primary" class="mb-20" onTap="openSheet">
     Sheet
   </f-btn>
   <f-sheet ref="saveSheetRef">
     <f-card>
       <view class="dash"/>
-      <f-card-content>
+      <f-card-content class="mb-16 mx-16">
         Sheet Content
       </f-card-content>
-      <f-card-actions>
-        <f-btn onTap="closeSheet" type="secondary">
+      <f-card-actions class="mb-16 mx-16">
+        <f-btn onTap="closeSheet" type="secondary" class="mr-8">
           Cancel
         </f-btn>
         <f-btn onTap="closeSheet" type="primary">
@@ -25,11 +25,11 @@
   <f-sheet ref="saveSheetRoundedRef" roundedTop>
     <f-card>
       <view class="dash"/>
-      <f-card-content>
+      <f-card-content class="mb-16 mx-16">
         Sheet (Rounded)
       </f-card-content>
-      <f-card-actions>
-        <f-btn onTap="closeSheetRounded" type="secondary">
+      <f-card-actions class="mb-16 mx-16">
+        <f-btn onTap="closeSheetRounded" type="secondary" class="mr-8">
           Cancel
         </f-btn>
         <f-btn onTap="closeSheetRounded" type="primary">
@@ -45,11 +45,11 @@
   <f-sheet ref="saveSheet2Ref" dismissable={{ false }} roundedTop>
     <f-card>
       <view class="dash"/>
-      <f-card-content>
+      <f-card-content class="mb-16 mx-16">
         Sheet (Non Disimissable Overlay)
       </f-card-content>
-      <f-card-actions>
-        <f-btn onTap="closeSheet2" type="secondary">
+      <f-card-actions class="mb-16 mx-16">
+        <f-btn onTap="closeSheet2" type="secondary" class="mr-8">
           Cancel
         </f-btn>
         <f-btn onTap="closeSheet2" type="primary">
@@ -65,12 +65,12 @@
   <f-sheet ref="saveSheetSwipeRef" swipe roundedTop>
     <f-card>
       <view class="dash"/>
-      <f-card-content>
+      <f-card-content class="mb-16 mx-16">
         <view>Sheet Swipe</view>
         <view>Swipe down to dismiss</view>
       </f-card-content>
-      <f-card-actions>
-        <f-btn onTap="closeSheetSwipe" type="secondary">
+      <f-card-actions class="mb-16 mx-16">
+        <f-btn onTap="closeSheetSwipe" type="secondary" class="mr-8">
           Cancel
         </f-btn>
         <f-btn onTap="closeSheetSwipe" type="primary">
