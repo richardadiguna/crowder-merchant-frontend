@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/home-screen/home-screen",
     "pages/index/index",
     "pages/provider-select/provider-select",
     
@@ -12,7 +13,7 @@
     "pages/fiat/sheet/sheet"
   ],
   "window": {
-    "defaultTitle": "Service Name",
+    "defaultTitle": "Crowder",
     "titleBarColor": "#108EE9"
   }
 }

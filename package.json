@@ -1,0 +1,22 @@
+{
+  "name": "crowder-merchant-frontend",
+  "version": "1.0.0",
+  "description": "Mini Program template for biller payment",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardadiguna/crowder-merchant-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardadiguna/crowder-merchant-frontend/issues"
+  },
+  "homepage": "https://github.com/richardadiguna/crowder-merchant-frontend#readme",
+  "dependencies": {
+    "mini-antui": "^0.4.35"
+  }
+}

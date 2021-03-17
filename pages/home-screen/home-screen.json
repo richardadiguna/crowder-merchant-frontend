@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Crowder Merchant",
+  "usingComponents": {
+    "f-btn": "/components/fiat/f-btn/f-btn",
+    "f-card": "/components/fiat/f-card/f-card",
+    "tabs": "mini-antui/es/tabs/index",
+    "tab-content": "mini-antui/es/tabs/tab-content/index"
+  }
+}

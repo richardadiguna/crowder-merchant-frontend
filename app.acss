@@ -1,3 +1,4 @@
+@import "./styles/bootstrap.acss";
 @import "./styles/fonts.acss";
 @import "./styles/fiat-commons.acss";
 

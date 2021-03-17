@@ -1,0 +1,75 @@
+<view>
+  <!-- <tabs
+      tabs="{{tabs}}"
+      showPlus="{{true}}"
+      onTabClick="handleTabClick"
+      onChange="handleTabChange"
+      activeTab="{{activeTab}}"
+    >
+    <block a:for="{{tabs}}"> -->
+      <!-- <tab-content key="{{index}}"> -->
+    <view class="container">
+      <view class="card my-1">
+        <view class="d-flex">
+          <view class="col-8 p-1">
+            <view class="card-title py-0 mb-1 text-left font-bold">Upgrade to business package!</view>
+            <view class="card-text psy-0 text-left" style="font-size: 12px">Pre order services that make you easier to manage your business.</view>
+          </view>
+          <view class="col-4 p-1 d-flex justify-content-center align-items-center">
+            <navigator url="/page/navigate/navigate?title=navigate" class="card-title mb-0 py-0 text-right font-bold" hover-class="navigator-hover">Upgrade!</navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+      <view class="container my-1">
+        <view class="d-flex no-gutters">
+          <view class="col-5 offset-7 text-right">
+            <view onTap="addNewProduct" class="btn btn-outline-primary" style="font-size: 13px; padding:.4em .4em; border-radius: 5px"> 
+              + Add New Product
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="container">
+        <view a:for="{{[1,2,3,4,5]}}" a:for-item="i" 
+          data-item="{{i}}" onTap="recentProductCellTap">
+            <view class="card container mb-1">
+              <view class="">
+                <view class="d-flex no-gutters">
+                  <view class="col-auto p-1 mt-2">
+                    <image 
+                      src="https://asset.kompas.com/crops/tRZeDkHGEFpgGe3PgWOM6udo0H4=/0x63:1210x870/750x500/data/photo/2020/11/26/5fbfd68ca0f7d.jpg" 
+                      style="object-fit: cover; max-width: 70px;" 
+                      alt="..."
+                      mode="widthFix"
+                    />
+                  </view>
+                  <view class="col p-1">
+                    <view class="card-title py-0 mb-1 text-left">Kue Lapis Legit</view>
+                    <view class="card-text psy-0 mb-1 text-left" style="font-size: 12px">Expiry Date 12 Aug 2025</view>
+                    <view class="f-title card-text py-0 mb-1 text-left">Rp. 50.000</view>
+                    <view class="progress my-1" style="height: 10px; border-radius: 4px;">
+                      <view class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></view>
+                    </view>
+                    <view class="card-text py-0 mb-1 text-right" style="font-size: 12px">5 Orders Left</view>
+                  </view>
+                </view>
+              </view>
+              <view class="">
+                <view class="d-flex no-gutters">
+                  <view class="col-auto p-1">
+                    <text>Total Rp.50.000,00</text>
+                  </view>
+                  <view class="col p-1 text-right">
+                    <navigator url="/page/navigate/navigate?title=navigate" class="card-title mb-0 py-0 text-right font-bold" hover-class="navigator-hover">EDIT PRODUCT</navigator>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- </tab-content>
+    </block>
+  </tabs> -->
+</view>

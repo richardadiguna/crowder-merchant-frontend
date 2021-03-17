@@ -1,9 +1,9 @@
 <import-sjs name="element" from="../../../utils/element.sjs"/>
 
-<button 
-  class="{{ element.classAttr(defaultClasses, className) }}"
+<view 
+  class="{{ element.classAttr(defaultClasses, className) }} text-center"
   onTap="onTap"
   disabled="{{disabled}}"
 >
   <slot></slot>
-</button>
+</view>
